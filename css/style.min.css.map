@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "style.min.css",
-	"sourceRoot": "D:/hugo_extended_0.131.0_windows-amd64/dev",
+	"sourceRoot": "/home/runner/work/hugo-dev/hugo-dev",
 	"sources": [
 		"themes/LoveIt/assets/css/style.scss",
 		"themes/LoveIt/assets/lib/modern-normalize/modern-normalize.css",
