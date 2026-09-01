@@ -4,21 +4,13 @@
         <link>https://Tcohneyn.github.io/posts/</link>
         <description>All Posts | Tcohneyn</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>minamichen@outlook.com (Tcohneyn)</managingEditor>
-            <webMaster>minamichen@outlook.com (Tcohneyn)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 31 Aug 2026 01:19:51 &#43;0800</lastBuildDate><atom:link href="https://Tcohneyn.github.io/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>New</title>
-    <link>https://Tcohneyn.github.io/new/</link>
-    <pubDate>Mon, 31 Aug 2026 01:19:51 &#43;0800</pubDate>
-    <author>minamichen@outlook.com (Tcohneyn)</author>
-    <guid>https://Tcohneyn.github.io/new/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>First_post</title>
-    <link>https://Tcohneyn.github.io/first_post/</link>
+            <webMaster>minamichen@outlook.com (Tcohneyn)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 29 Aug 2026 10:55:53 &#43;0800</lastBuildDate><atom:link href="https://Tcohneyn.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>主题文档 - Hugo美化</title>
+    <link>https://Tcohneyn.github.io/hugo/</link>
     <pubDate>Sat, 29 Aug 2026 10:55:53 &#43;0800</pubDate>
     <author>minamichen@outlook.com (Tcohneyn)</author>
-    <guid>https://Tcohneyn.github.io/first_post/</guid>
-    <description><![CDATA[]]></description>
+    <guid>https://Tcohneyn.github.io/hugo/</guid>
+    <description><![CDATA[【Hugo】LoveIt主题自定义修改 1.修改鼠标样式 (1) 准备好鼠标样式图片(默认，指针，文本…)，图片大小建议控制在 32px 左右，将图片放入sta]]></description>
 </item>
 <item>
     <title>主题文档 - 基本概念</title>
@@ -45,14 +37,6 @@
     <description><![CDATA[<p><strong>LoveIt</strong> 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode.</p>]]></description>
 </item>
 <item>
-    <title>Markdown 基本语法</title>
-    <link>https://Tcohneyn.github.io/basic-markdown-syntax/</link>
-    <pubDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</pubDate>
-    <author>minamichen@outlook.com (Tcohneyn)</author>
-    <guid>https://Tcohneyn.github.io/basic-markdown-syntax/</guid>
-    <description><![CDATA[<p>这篇文章提供了可以在 Hugo 的文章中使用的基本 Markdown 语法示例.</p>]]></description>
-</item>
-<item>
     <title>主题文档 - mermaid Shortcode</title>
     <link>https://Tcohneyn.github.io/theme-documentation-mermaid-shortcode/</link>
     <pubDate>Tue, 03 Mar 2020 15:29:59 &#43;0800</pubDate>
@@ -60,14 +44,6 @@
     <guid>https://Tcohneyn.github.io/theme-documentation-mermaid-shortcode/</guid>
     <description><![CDATA[<a href="https://github.com/dillonzq/LoveIt/releases/tag/v0.2.11" rel="noopener noreffer" target="_blank"></a>
 <p><code>mermaid</code> shortcode 使用 <a href="https://mermaidjs.github.io/" target="_blank" rel="noopener noreffer ">Mermaid</a> 库提供绘制图表和流程图的功能.</p>]]></description>
-</item>
-<item>
-    <title>Emoji 支持</title>
-    <link>https://Tcohneyn.github.io/emoji-support/</link>
-    <pubDate>Tue, 01 Oct 2019 17:55:28 &#43;0800</pubDate>
-    <author>minamichen@outlook.com (Tcohneyn)</author>
-    <guid>https://Tcohneyn.github.io/emoji-support/</guid>
-    <description><![CDATA[<p>Emoji 可以通过多种方式在 Hugo 项目中启用.</p>]]></description>
 </item>
 <item>
     <title>主题文档 - echarts Shortcode</title>
@@ -85,6 +61,31 @@
     <guid>https://Tcohneyn.github.io/theme-documentation-mapbox-shortcode/</guid>
     <description><![CDATA[<a href="https://github.com/dillonzq/LoveIt/releases/tag/v0.2.0" rel="noopener noreffer" target="_blank"></a>
 <p><code>mapbox</code> shortcode 使用 <a href="https://docs.mapbox.com/mapbox-gl-js" target="_blank" rel="noopener noreffer ">Mapbox GL JS</a> 库提供互动式地图的功能.</p>]]></description>
+</item>
+<item>
+    <title>主题文档 - music Shortcode</title>
+    <link>https://Tcohneyn.github.io/theme-documentation-music-shortcode/</link>
+    <pubDate>Tue, 03 Mar 2020 12:29:59 &#43;0800</pubDate>
+    <author>minamichen@outlook.com (Tcohneyn)</author>
+    <guid>https://Tcohneyn.github.io/theme-documentation-music-shortcode/</guid>
+    <description><![CDATA[<p><code>music</code> shortcode 基于 <a href="https://github.com/MoePlayer/APlayer" target="_blank" rel="noopener noreffer ">APlayer</a> 和 <a href="https://github.com/metowolf/MetingJS" target="_blank" rel="noopener noreffer ">MetingJS</a> 库提供了一个内嵌的响应式音乐播放器.</p>]]></description>
+</item>
+<item>
+    <title>主题文档 - bilibili Shortcode</title>
+    <link>https://Tcohneyn.github.io/theme-documentation-bilibili-shortcode/</link>
+    <pubDate>Tue, 03 Mar 2020 11:29:41 &#43;0800</pubDate>
+    <author>minamichen@outlook.com (Tcohneyn)</author>
+    <guid>https://Tcohneyn.github.io/theme-documentation-bilibili-shortcode/</guid>
+    <description><![CDATA[<a href="https://github.com/dillonzq/LoveIt/releases/tag/v0.2.0" rel="noopener noreffer" target="_blank"></a>
+<p><code>bilibili</code> shortcode 提供了一个内嵌的用来播放 bilibili 视频的响应式播放器.</p>]]></description>
+</item>
+<item>
+    <title>主题文档 - typeit Shortcode</title>
+    <link>https://Tcohneyn.github.io/theme-documentation-typeit-shortcode/</link>
+    <pubDate>Tue, 03 Mar 2020 10:29:59 &#43;0800</pubDate>
+    <author>minamichen@outlook.com (Tcohneyn)</author>
+    <guid>https://Tcohneyn.github.io/theme-documentation-typeit-shortcode/</guid>
+    <description><![CDATA[<p><code>typeit</code> shortcode 基于 <a href="https://typeitjs.com/" target="_blank" rel="noopener noreffer ">TypeIt</a> 库提供了打字动画.</p>]]></description>
 </item>
 </channel>
 </rss>

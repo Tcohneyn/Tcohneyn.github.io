@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Hugo - Tag - Tcohneyn</title>
+        <link>https://Tcohneyn.github.io/tags/hugo/</link>
+        <description>Hugo - Tag - Tcohneyn</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>minamichen@outlook.com (Tcohneyn)</managingEditor>
+            <webMaster>minamichen@outlook.com (Tcohneyn)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 29 Aug 2026 10:55:53 &#43;0800</lastBuildDate><atom:link href="https://Tcohneyn.github.io/tags/hugo/" rel="self" type="application/rss+xml" /><item>
+    <title>主题文档 - Hugo美化</title>
+    <link>https://Tcohneyn.github.io/hugo/</link>
+    <pubDate>Sat, 29 Aug 2026 10:55:53 &#43;0800</pubDate>
+    <author>minamichen@outlook.com (Tcohneyn)</author>
+    <guid>https://Tcohneyn.github.io/hugo/</guid>
+    <description><![CDATA[【Hugo】LoveIt主题自定义修改 1.修改鼠标样式 (1) 准备好鼠标样式图片(默认，指针，文本…)，图片大小建议控制在 32px 左右，将图片放入sta]]></description>
+</item>
+</channel>
+</rss>
