@@ -23,9 +23,7 @@
   <meta name="twitter:description" content="Hugo - LoveIt 主题美化记录总结.">
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt">
-<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://Tcohneyn.github.io/hugo/" /><link rel="prev" href="https://Tcohneyn.github.io/theme-documentation-basics/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/image/logo.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://Tcohneyn.github.io/hugo/" /><link rel="prev" href="https://Tcohneyn.github.io/theme-documentation-basics/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -41,7 +39,7 @@
                             "url": "https:\/\/Tcohneyn.github.io\/hugo\/featured-image.jpg",
                             "width":  1920 ,
                             "height":  1080 
-                        }],"genre": "posts","keywords": "教程, Hugo","wordcount":  475 ,
+                        }],"genre": "posts","keywords": "教程, Hugo","wordcount":  1836 ,
         "url": "https:\/\/Tcohneyn.github.io\/hugo\/","datePublished": "2026-08-29T10:55:53+08:00","dateModified": "2026-08-29T10:55:53+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": {
@@ -131,8 +129,8 @@
             <div class="toc-content always-active" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">主题文档 - Hugo美化</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>Tcohneyn</a></span>&nbsp;<span class="post-category">included in <a href="/categories/documentation/"><i class="far fa-folder" aria-hidden="true"></i>文档</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2026-08-29">2026-08-29</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;475 words&nbsp;
-                <i class="far fa-clock" aria-hidden="true"></i>&nbsp;One minute&nbsp;<span id="/hugo/" class="leancloud_visitors" data-flag-title="主题文档 - Hugo美化">
+            <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2026-08-29">2026-08-29</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;1836 words&nbsp;
+                <i class="far fa-clock" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;<span id="/hugo/" class="leancloud_visitors" data-flag-title="主题文档 - Hugo美化">
                         <i class="far fa-eye" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
         </div><div class="featured-image"><img
@@ -149,93 +147,187 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#1修改鼠标样式">1.修改鼠标样式</a></li>
-    <li><a href="#2macos风格的代码块">2.macOS风格的代码块</a></li>
+    <li><a href="#添加自定义的_customscss">添加自定义的_custom.scss</a></li>
+    <li><a href="#添加自定义的customjs">添加自定义的custom.js</a></li>
+    <li><a href="#修改鼠标样式">修改鼠标样式</a></li>
+    <li><a href="#macos风格的代码块">macOS风格的代码块</a></li>
+    <li><a href="#文章-h2-标题">文章 H2 标题</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="hugoloveit主题自定义修改">【Hugo】LoveIt主题自定义修改</h1>
-<h2 id="1修改鼠标样式">1.修改鼠标样式</h2>
+            </div><div class="content" id="content"><h1 id="前言">前言</h1>
+<p>本博客使用的是Hugo的LoveIt主题，本文也是基于该主题而写的，不过Hugo的美化步骤应该大同小异，版本如下：</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo: v0.131.0/extended windows/amd64 BuildDate: unknown
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">LoveIt: v0.3.1</span></span></code></pre></div></div>
+<p><strong>请注意，本文的所有功能都离不开两个新增加的文件：<code>_custom.scss</code>和<code>custom.js</code>，部分功能还需要<code>jquery</code>。</strong></p>
+<h2 id="添加自定义的_customscss">添加自定义的_custom.scss</h2>
+<p>LoveIt主题提供了一个自定义的<code>_custom.scss</code>，可以在该文件里添加自定义的css样式。该文件目录位于<code>\themes\LoveIt\assets\css\_custom.scss</code>，不建议直接在该文件里写css代码。</p>
+<p>Hugo在渲染页面时优先读取站点根目录下的同名字的目录和文件，所以可以利用这个特点来美化主题。<strong>只需要把想修改的主题模板文件拷贝到根目录下同样的目录中并进行修改，这样就可以在不改动原本的主题文件的情况下实现主题美化。</strong></p>
+<p>首先在站点根目录下创建一个自定义的文件：<code>\assets\css\_custom.scss</code>，这样Hugo就会最终以该文件来渲染页面的样式。</p>
+<blockquote>
+<p>注意！！！</p>
+</blockquote>
+<p>这里有个很关键的点，只有使用的是扩展版本的Hugo，才能令<code>_custom.scss</code>文件生效！！！因为原生的Hugo并不支持编译sass文件，必须使用扩展版本的Hugo才行。</p>
+<p>所以请查看你所使用的Hugo版本，如果不是<code>hugo_extended</code>版本，请前往<a href="https://github.com/gohugoio/hugo/releases" target="_blank" rel="noopener noreffer ">Hugo Release页面</a>下载你当前版本Hugo所对应的<code>hugo_extended</code>版本。</p>
+<p>比如我原本使用的是<code>hugo_0.131.0_Windows-64bit.zip</code>，就需要改为使用<code>hugo_extended_0.131.0_Windows-64bit.zip</code>。</p>
+<p>此外，本文会涉及多个文件的修改，包括hmtl、js、scss等文件类型，且由于<strong>引入了中文字符</strong>，可能导致页面<strong>显示乱码</strong>，这是因为文件的编码使用的是<code>ANSI</code>，<strong>需要改为<code>UTF-8</code>的编码</strong>。</p>
+<h2 id="添加自定义的customjs">添加自定义的custom.js</h2>
+<p>LoveIt主题并没有提供一个文件来让我们自定义JavaScript，所以需要自己创建一个js文件来自定义JavaScript。</p>
+<p>首先在站点根目录下创建一个自定义的JavaScript文件：<code>\static\js\custom.js</code>。这个文件需要在body的闭合标签之前引入，并且要在<code>theme.min.js</code>的引入顺序之后。这样可以防止样式被其他文件覆盖，并且不会因为JavaScript文件加载太久导致页面长时间的空白。</p>
+<p>对于LoveIt主题，<code>custom.js</code>添加在<code>\themes\LoveIt\layouts\partials\assets.html</code>里。</p>
+<p>首先把该文件拷贝到根目录下的<code>\layouts\partials\assets.html</code>，然后打开拷贝后的文件，把自定义的JavaScript文件添加到最末尾的<code>{{- partial &quot;plugin/analytics.html&quot; . -}}</code>的上一行：</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-html">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{- /* 自定义的js文件 */ -}}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/js/custom.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+<p>由于本文提及的部分功能会用到jQuery，建议一起引入，最终如下：</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">&lt;script <span class="nv">type</span><span class="o">=</span><span class="s2">&#34;text/javascript&#34;</span> <span class="nv">src</span><span class="o">=</span><span class="s2">&#34;https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js&#34;</span>&gt;&lt;/script&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">{{</span>- /* 自定义的js文件 */ -<span class="o">}}</span>
+</span></span><span class="line"><span class="cl">&lt;script <span class="nv">type</span><span class="o">=</span><span class="s2">&#34;text/javascript&#34;</span> <span class="nv">src</span><span class="o">=</span><span class="s2">&#34;/js/custom.js&#34;</span>&gt;&lt;/script&gt;</span></span></code></pre></div></div>
+<h2 id="修改鼠标样式">修改鼠标样式</h2>
 <ul>
 <li>(1) 准备好鼠标样式图片(默认，指针，文本…)，图片大小建议控制在 <strong>32px</strong> 左右，将图片放入<code>static/mouse</code>文件夹下(文件夹自己创建)</li>
 </ul>
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
-        data-src=".%5cSnipaste_2026-09-01_20-30-15.png"
-        data-srcset=".%5cSnipaste_2026-09-01_20-30-15.png, .%5cSnipaste_2026-09-01_20-30-15.png 1.5x, .%5cSnipaste_2026-09-01_20-30-15.png 2x"
+        data-src="./Snipaste_2026-09-01_20-30-15.png"
+        data-srcset="./Snipaste_2026-09-01_20-30-15.png, ./Snipaste_2026-09-01_20-30-15.png 1.5x, ./Snipaste_2026-09-01_20-30-15.png 2x"
         data-sizes="auto"
-        alt=".\Snipaste_2026-09-01_20-30-15.png"
-        title=".\Snipaste_2026-09-01_20-30-15.png" /></p>
+        alt="./Snipaste_2026-09-01_20-30-15.png"
+        title="./Snipaste_2026-09-01_20-30-15.png" /></p>
 <ul>
 <li>(2) 修改<code>assets/css/_custom.scss</code>(文件不存在则自己创建)，将以下代码复制进去，根据主题按实际情况填写对应的css选择器</li>
 </ul>
 <div class="code-block code-line-numbers" style="counter-reset: code-block 0">
-    <div class="code-header language-">
+    <div class="code-header language-scss">
         <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
         <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
         <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
-    </div><pre tabindex="0"><code>// ==============================
-// Custom style
-// 自定义样式
-// ==============================
-/* ===== 自定义鼠标光标（LoveIt + 纯 PNG）===== */
-
-// 1. 默认光标
-body,
-.single .content,
-.home .home-profile {
-  cursor: url(&#34;/mouse/default.png&#34;) 16 16, auto;
-}
-
-// 2. 指针光标（链接、按钮）
-a:hover,
-button:hover,
-.theme-switch,
-.header .menu .menu-item a:hover {
-  cursor: url(&#34;/mouse/pointer.png&#34;) 16 16, pointer;
-}
-
-// 3. 文本光标（输入框、正文）
-input,
-textarea,
-.single .content p,
-.single .content li {
-  cursor: url(&#34;/mouse/text.png&#34;) 16 16, text;
-}</code></pre></div>
-<h2 id="2macos风格的代码块">2.macOS风格的代码块</h2>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// ==============================
+</span></span></span><span class="line"><span class="cl"><span class="c1">// Custom style
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 自定义样式
+</span></span></span><span class="line"><span class="cl"><span class="c1">// ==============================
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cm">/* ===== 自定义鼠标光标（LoveIt + 纯 PNG）===== */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 1. 默认光标
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nt">body</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nc">.single</span> <span class="nc">.content</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nc">.home</span> <span class="nc">.home-profile</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">cursor</span><span class="o">:</span> <span class="sx">url(&#34;/mouse/default.png&#34;)</span> <span class="mi">5</span> <span class="mi">5</span><span class="o">,</span> <span class="ni">auto</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 2. 指针光标（链接、按钮）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="na">a</span><span class="o">:</span><span class="n">hover</span><span class="o">,</span><span class="na">
+</span></span></span><span class="line"><span class="cl"><span class="na">button</span><span class="o">:</span><span class="n">hover</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="o">.</span><span class="n">theme-switch</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="o">.</span><span class="n">header</span> <span class="o">.</span><span class="ni">menu</span> <span class="o">.</span><span class="ni">menu</span><span class="o">-</span><span class="n">item</span> <span class="n">a</span><span class="o">:</span><span class="n">hover</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">cursor</span><span class="o">:</span> <span class="sx">url(&#34;/mouse/pointer.png&#34;)</span> <span class="mi">5</span> <span class="mi">5</span><span class="o">,</span> <span class="ni">pointer</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 3. 文本光标（输入框、正文）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nt">input</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">textarea</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nc">.single</span> <span class="nc">.content</span> <span class="nt">p</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nc">.single</span> <span class="nc">.content</span> <span class="nt">li</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">cursor</span><span class="o">:</span> <span class="sx">url(&#34;/mouse/text.png&#34;)</span> <span class="mi">5</span> <span class="mi">5</span><span class="o">,</span> <span class="ni">text</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<h2 id="macos风格的代码块">macOS风格的代码块</h2>
 <ul>
 <li>准备一张macOS代码块的<a href="./macOS-code-header.svg" rel=""><strong>红绿灯图片</strong></a>(Ctrl+S保存), 放到<code>static/icons</code>文件夹下</li>
 <li>将以下代码复制进<code>assets/css/_custom.scss</code>文件中(不存在则自行创建)</li>
 </ul>
 <div class="code-block code-line-numbers" style="counter-reset: code-block 0">
-    <div class="code-header language-">
+    <div class="code-header language-scss">
         <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
         <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
         <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
-    </div><pre tabindex="0"><code>/* ===== macOS 风格代码块 ===== */
-
-.highlight {
-  border-radius: var(--card-border-radius);
-  max-width: 100% !important;
-  margin: 1rem 0 !important;
-  box-shadow: var(--shadow-l1) !important;
-  overflow: hidden;
-}
-
-// 隐藏 LoveIt 原生的代码块头部（包含语言名称和复制按钮）
-.highlight .code-header {
-  display: none !important;
-}
-// 用伪元素生成 macOS 圆点条
-.highlight:before {
-  content: &#34;&#34;;
-  display: block;
-  background: url(/icons/macOS-code-header.svg) no-repeat 12px center;
-  background-size: 48px 12px;
-  height: 28px;
-  background-color: var(--code-bg, #f6f8fa);
-  border-bottom: 1px solid var(--border-color, #e1e8ed);
-}</code></pre></div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="cm">/* ===== macOS 风格代码块 ===== */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nc">.highlight</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">border-radius</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">card-border-radius</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">max-width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span> <span class="k">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">margin</span><span class="o">:</span> <span class="mi">1</span><span class="kt">rem</span> <span class="mi">0</span> <span class="k">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">box-shadow</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">shadow-l1</span><span class="p">)</span> <span class="k">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">overflow</span><span class="o">:</span> <span class="ni">hidden</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 隐藏 LoveIt 原生的代码块头部（包含语言名称和复制按钮）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nc">.highlight</span> <span class="nc">.code-header</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">display</span><span class="o">:</span> <span class="ni">none</span> <span class="k">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 用伪元素生成 macOS 圆点条
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nc">.highlight</span><span class="nd">:before</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">content</span><span class="o">:</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">display</span><span class="o">:</span> <span class="ni">block</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">background</span><span class="o">:</span> <span class="sx">url(/icons/macOS-code-header.svg)</span> <span class="ni">no-repeat</span> <span class="mi">12</span><span class="kt">px</span> <span class="ni">center</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">background-size</span><span class="o">:</span> <span class="mi">48</span><span class="kt">px</span> <span class="mi">12</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">height</span><span class="o">:</span> <span class="mi">28</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">background-color</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">code-bg</span><span class="o">,</span> <span class="mh">#f6f8fa</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">border-bottom</span><span class="o">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="ni">solid</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">border-color</span><span class="o">,</span> <span class="mh">#e1e8ed</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<h2 id="文章-h2-标题">文章 H2 标题</h2>
+<ul>
+<li>修改H2标题样式如图</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./Snipaste_2026-09-04_00-10-30.png"
+        data-srcset="./Snipaste_2026-09-04_00-10-30.png, ./Snipaste_2026-09-04_00-10-30.png 1.5x, ./Snipaste_2026-09-04_00-10-30.png 2x"
+        data-sizes="auto"
+        alt="./Snipaste_2026-09-04_00-10-30.png"
+        title="./Snipaste_2026-09-04_00-10-30.png" /></p>
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
+    <div class="code-header language-scss">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="cm">/*h2 标题 */</span>
+</span></span><span class="line"><span class="cl"><span class="nc">.page.single</span> <span class="nt">h2</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="na">box-shadow</span><span class="o">:</span> <span class="nf">rgb</span><span class="p">(</span><span class="mi">95</span><span class="o">,</span> <span class="mi">90</span><span class="o">,</span> <span class="mi">75</span><span class="p">)</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">1</span><span class="kt">px</span><span class="o">,</span> <span class="nf">rgba</span><span class="p">(</span><span class="mi">10</span><span class="o">,</span> <span class="mi">10</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="mf">.5</span><span class="p">)</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">6</span><span class="kt">px</span> <span class="mi">1</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">color</span><span class="o">:</span> <span class="nf">rgb</span><span class="p">(</span><span class="mi">255</span><span class="o">,</span> <span class="mi">255</span><span class="o">,</span> <span class="mi">255</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="na">font-family</span><span class="o">:</span> <span class="err">微软雅黑</span><span class="o">,</span> <span class="err">宋体</span><span class="o">,</span> <span class="err">黑体</span><span class="o">,</span> <span class="n">Arial</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">font-weight</span><span class="o">:</span> <span class="ni">bold</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">line-height</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.3</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">text-shadow</span><span class="o">:</span> <span class="nf">rgb</span><span class="p">(</span><span class="mi">34</span><span class="o">,</span> <span class="mi">34</span><span class="o">,</span> <span class="mi">34</span><span class="p">)</span> <span class="mi">2</span><span class="kt">px</span> <span class="mi">2</span><span class="kt">px</span> <span class="mi">3</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">background</span><span class="o">:</span> <span class="nf">rgb</span><span class="p">(</span><span class="mi">46</span><span class="o">,</span> <span class="mi">125</span><span class="o">,</span> <span class="mi">50</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="na">border-radius</span><span class="o">:</span> <span class="mi">6</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">border-width</span><span class="o">:</span> <span class="ni">initial</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">border-style</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">border-color</span><span class="o">:</span> <span class="ni">initial</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">border-image</span><span class="o">:</span> <span class="ni">initial</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">padding</span><span class="o">:</span> <span class="mi">7</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">margin</span><span class="o">:</span> <span class="mi">18</span><span class="kt">px</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">18</span><span class="kt">px</span> <span class="o">-</span><span class="mi">5</span><span class="kt">px</span> <span class="k">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<ul>
+<li>暗黑模式修改</li>
+</ul>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-scss">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="cm">/* 暗黑模式  */</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="nt">theme</span><span class="o">=</span><span class="nt">dark</span><span class="o">]</span> <span class="nc">.page.single</span> <span class="nt">h2</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">background</span><span class="o">:</span> <span class="nf">rgb</span><span class="p">(</span><span class="mi">27</span><span class="o">,</span> <span class="mi">94</span><span class="o">,</span> <span class="mi">32</span><span class="p">);</span>           <span class="cm">/* 暗黑下用更深的绿 */</span>
+</span></span><span class="line"><span class="cl">  <span class="na">color</span><span class="o">:</span> <span class="mh">#e8f5e9</span><span class="p">;</span>                         <span class="cm">/* 文字微微偏绿白，柔和 */</span>
+</span></span><span class="line"><span class="cl">  <span class="na">box-shadow</span><span class="o">:</span> <span class="nf">rgb</span><span class="p">(</span><span class="mi">20</span><span class="o">,</span> <span class="mi">50</span><span class="o">,</span> <span class="mi">20</span><span class="p">)</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">1</span><span class="kt">px</span><span class="o">,</span> <span class="nf">rgba</span><span class="p">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="mf">.6</span><span class="p">)</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">6</span><span class="kt">px</span> <span class="mi">1</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

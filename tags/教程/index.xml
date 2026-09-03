@@ -10,7 +10,7 @@
     <pubDate>Sat, 29 Aug 2026 10:55:53 &#43;0800</pubDate>
     <author>minamichen@outlook.com (Tcohneyn)</author>
     <guid>https://Tcohneyn.github.io/hugo/</guid>
-    <description><![CDATA[【Hugo】LoveIt主题自定义修改 1.修改鼠标样式 (1) 准备好鼠标样式图片(默认，指针，文本…)，图片大小建议控制在 32px 左右，将图片放入sta]]></description>
+    <description><![CDATA[前言 本博客使用的是Hugo的LoveIt主题，本文也是基于该主题而写的，不过Hugo的美化步骤应该大同小异，版本如下： hugo: v0.131.0/extended windows/amd64 BuildDate: unknown LoveIt: v0.3.1 请注意，]]></description>
 </item>
 </channel>
 </rss>
