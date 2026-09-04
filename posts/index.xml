@@ -4,7 +4,15 @@
         <link>https://Tcohneyn.github.io/posts/</link>
         <description>All Posts | Tcohneyn</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>minamichen@outlook.com (Tcohneyn)</managingEditor>
-            <webMaster>minamichen@outlook.com (Tcohneyn)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 29 Aug 2026 10:55:53 &#43;0800</lastBuildDate><atom:link href="https://Tcohneyn.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>minamichen@outlook.com (Tcohneyn)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 04 Sep 2026 18:01:53 &#43;0800</lastBuildDate><atom:link href="https://Tcohneyn.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>主题文档 - Hugo液态玻璃效果</title>
+    <link>https://Tcohneyn.github.io/hugo-liquid-glass/</link>
+    <pubDate>Fri, 04 Sep 2026 18:01:53 &#43;0800</pubDate>
+    <author>minamichen@outlook.com (Tcohneyn)</author>
+    <guid>https://Tcohneyn.github.io/hugo-liquid-glass/</guid>
+    <description><![CDATA[引用 参考Liquid Glass实现的液态玻璃效果。 存放svg效果 将Liquid Glass中的svg效果存放在./layouts/partia]]></description>
+</item>
+<item>
     <title>主题文档 - Hugo美化</title>
     <link>https://Tcohneyn.github.io/hugo/</link>
     <pubDate>Sat, 29 Aug 2026 10:55:53 &#43;0800</pubDate>
@@ -78,14 +86,6 @@
     <guid>https://Tcohneyn.github.io/theme-documentation-bilibili-shortcode/</guid>
     <description><![CDATA[<a href="https://github.com/dillonzq/LoveIt/releases/tag/v0.2.0" rel="noopener noreffer" target="_blank"></a>
 <p><code>bilibili</code> shortcode 提供了一个内嵌的用来播放 bilibili 视频的响应式播放器.</p>]]></description>
-</item>
-<item>
-    <title>主题文档 - typeit Shortcode</title>
-    <link>https://Tcohneyn.github.io/theme-documentation-typeit-shortcode/</link>
-    <pubDate>Tue, 03 Mar 2020 10:29:59 &#43;0800</pubDate>
-    <author>minamichen@outlook.com (Tcohneyn)</author>
-    <guid>https://Tcohneyn.github.io/theme-documentation-typeit-shortcode/</guid>
-    <description><![CDATA[<p><code>typeit</code> shortcode 基于 <a href="https://typeitjs.com/" target="_blank" rel="noopener noreffer ">TypeIt</a> 库提供了打字动画.</p>]]></description>
 </item>
 </channel>
 </rss>

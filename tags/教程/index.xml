@@ -4,7 +4,15 @@
         <link>https://Tcohneyn.github.io/tags/%E6%95%99%E7%A8%8B/</link>
         <description>教程 - Tag - Tcohneyn</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>minamichen@outlook.com (Tcohneyn)</managingEditor>
-            <webMaster>minamichen@outlook.com (Tcohneyn)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 29 Aug 2026 10:55:53 &#43;0800</lastBuildDate><atom:link href="https://Tcohneyn.github.io/tags/%E6%95%99%E7%A8%8B/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>minamichen@outlook.com (Tcohneyn)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 04 Sep 2026 18:01:53 &#43;0800</lastBuildDate><atom:link href="https://Tcohneyn.github.io/tags/%E6%95%99%E7%A8%8B/" rel="self" type="application/rss+xml" /><item>
+    <title>主题文档 - Hugo液态玻璃效果</title>
+    <link>https://Tcohneyn.github.io/hugo-liquid-glass/</link>
+    <pubDate>Fri, 04 Sep 2026 18:01:53 &#43;0800</pubDate>
+    <author>minamichen@outlook.com (Tcohneyn)</author>
+    <guid>https://Tcohneyn.github.io/hugo-liquid-glass/</guid>
+    <description><![CDATA[引用 参考Liquid Glass实现的液态玻璃效果。 存放svg效果 将Liquid Glass中的svg效果存放在./layouts/partia]]></description>
+</item>
+<item>
     <title>主题文档 - Hugo美化</title>
     <link>https://Tcohneyn.github.io/hugo/</link>
     <pubDate>Sat, 29 Aug 2026 10:55:53 &#43;0800</pubDate>

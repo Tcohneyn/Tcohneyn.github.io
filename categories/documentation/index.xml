@@ -4,15 +4,7 @@
         <link>https://Tcohneyn.github.io/categories/documentation/</link>
         <description>文档 - Category - Tcohneyn</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>minamichen@outlook.com (Tcohneyn)</managingEditor>
-            <webMaster>minamichen@outlook.com (Tcohneyn)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 29 Aug 2026 10:55:53 &#43;0800</lastBuildDate><atom:link href="https://Tcohneyn.github.io/categories/documentation/" rel="self" type="application/rss+xml" /><item>
-    <title>主题文档 - Hugo美化</title>
-    <link>https://Tcohneyn.github.io/hugo/</link>
-    <pubDate>Sat, 29 Aug 2026 10:55:53 &#43;0800</pubDate>
-    <author>minamichen@outlook.com (Tcohneyn)</author>
-    <guid>https://Tcohneyn.github.io/hugo/</guid>
-    <description><![CDATA[前言 本博客使用的是Hugo的LoveIt主题，本文也是基于该主题而写的，不过Hugo的美化步骤应该大同小异，版本如下： hugo: v0.131.0/extended windows/amd64 BuildDate: unknown LoveIt: v0.3.1 请注意，]]></description>
-</item>
-<item>
+            <webMaster>minamichen@outlook.com (Tcohneyn)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 06 Mar 2020 21:40:32 &#43;0800</lastBuildDate><atom:link href="https://Tcohneyn.github.io/categories/documentation/" rel="self" type="application/rss+xml" /><item>
     <title>主题文档 - 基本概念</title>
     <link>https://Tcohneyn.github.io/theme-documentation-basics/</link>
     <pubDate>Fri, 06 Mar 2020 21:40:32 &#43;0800</pubDate>

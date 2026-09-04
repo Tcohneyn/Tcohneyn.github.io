@@ -8,7 +8,7 @@
       }
     },
     "color": {
-      "value": "#f3afca"
+      "value": "#76C457"
     },
     "shape": {
       "type": "circle",
@@ -48,7 +48,7 @@
     "line_linked": {
       "enable": true,
       "distance": 80,
-      "color": "#f3afca",
+      "color": "#76C457",
       "opacity": 0.4,
       "width": 1
     },

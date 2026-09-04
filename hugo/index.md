@@ -168,4 +168,67 @@ textarea,
 }
 ```
 
+## 首页文章卡片效果
+
+由于Hugo-loveit自身的首页不算我喜欢的类型，所以我决定把文章展示实现卡片化效果。
+
+![](./Snipaste_2026-09-05_00-21-43.png)
+
+### 1.将卡片圆角并窄化
+
+卡片边框的选择器为`.home[data-home=posts] .summary`，那么修改以下元素，代码如下：
+
+```scss
+/* 首页文章卡片效果 */
+.home[data-home=posts] .summary {
+    border-bottom: none;
+    background: rgba(255, 255, 255, 0.08) !important;
+    //边框属性
+    border: -17px solid transparent;
+    border-radius: 16px !important;
+    padding: 15px !important;
+
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.6), 0 16px 32px rgba(0, 0, 0, 0.12) !important;
+
+
+    max-width: 50rem;        /* 想更窄就调小，如 38rem / 640px / 68ch */
+    margin-bottom: 3rem;     /* 卡片之间间距大小*/
+    margin-inline: auto;     /* 左右自适应居中 */
+
+      /* 核心：调用 SVG 液态玻璃滤镜 */
+  backdrop-filter: url(#frosted) blur(5px) !important;
+  -webkit-backdrop-filter: url(#frosted) blur(5px) !important;
+
+}
+
+/* 暗黑模式适应 (Hugo LoveIt 支持 dark mode) */
+[theme=dark] .home[data-home=posts] .summary {
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.3), 0 16px 32px rgba(255, 255, 255, 0.06) !important;
+}
+
+```
+
+### 2.让图片显示无边框效果
+
+代码如下：
+
+```scss
+.home[data-home=posts] .summary .featured-image-preview {
+  width: calc(100% + 34px) !important;
+  max-width: none !important;
+  margin: -17px -17px 1px !important;   /* 上左右全贴，底部留 15px 呼吸 */
+}
+.home[data-home=posts] .summary .featured-image-preview img {
+  display: block;
+  width: 100%;
+  border-radius: 0;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;                  /* 固定比例，避免不同尺寸图高低不齐 */
+}
+/* 让卡片自己裁掉顶部的直角，比手算图片圆角稳 */
+.home[data-home=posts] .summary {
+  overflow: hidden;
+}
+```
+
 

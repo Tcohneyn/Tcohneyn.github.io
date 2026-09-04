@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Hugo - Tag - Tcohneyn</title>
-        <link>https://Tcohneyn.github.io/tags/hugo/</link>
-        <description>Hugo - Tag - Tcohneyn</description>
+        <title>Hugo - Category - Tcohneyn</title>
+        <link>https://Tcohneyn.github.io/categories/hugo/</link>
+        <description>Hugo - Category - Tcohneyn</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>minamichen@outlook.com (Tcohneyn)</managingEditor>
-            <webMaster>minamichen@outlook.com (Tcohneyn)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 04 Sep 2026 18:01:53 &#43;0800</lastBuildDate><atom:link href="https://Tcohneyn.github.io/tags/hugo/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>minamichen@outlook.com (Tcohneyn)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 04 Sep 2026 18:01:53 &#43;0800</lastBuildDate><atom:link href="https://Tcohneyn.github.io/categories/hugo/" rel="self" type="application/rss+xml" /><item>
     <title>主题文档 - Hugo液态玻璃效果</title>
     <link>https://Tcohneyn.github.io/hugo-liquid-glass/</link>
     <pubDate>Fri, 04 Sep 2026 18:01:53 &#43;0800</pubDate>
