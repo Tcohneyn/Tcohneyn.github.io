@@ -2,15 +2,20 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://Tcohneyn.github.io/categories/</loc><lastmod>2026-09-04T18:01:53&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://Tcohneyn.github.io/tags/hugo/</loc><lastmod>2026-09-04T18:01:53&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://Tcohneyn.github.io/categories/hugo/</loc><lastmod>2026-09-04T18:01:53&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://Tcohneyn.github.io/posts/</loc><lastmod>2026-09-04T18:01:53&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://Tcohneyn.github.io/tags/</loc><lastmod>2026-09-04T18:01:53&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://Tcohneyn.github.io/</loc><lastmod>2026-09-04T18:01:53&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://Tcohneyn.github.io/hugo-liquid-glass/</loc><lastmod>2026-09-04T18:01:53&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://Tcohneyn.github.io/tags/%E6%95%99%E7%A8%8B/</loc><lastmod>2026-09-04T18:01:53&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://Tcohneyn.github.io/hugo/</loc><lastmod>2026-08-29T10:55:53&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://Tcohneyn.github.io/tags/ai/</loc><lastmod>2026-09-22T15:46:03&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://Tcohneyn.github.io/categories/ai/</loc><lastmod>2026-09-22T15:46:03&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://Tcohneyn.github.io/categories/</loc><lastmod>2026-09-22T15:46:03&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://Tcohneyn.github.io/ai-apiimage/</loc><lastmod>2026-09-22T15:46:03&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://Tcohneyn.github.io/posts/</loc><lastmod>2026-09-22T15:46:03&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://Tcohneyn.github.io/tags/</loc><lastmod>2026-09-22T15:46:03&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://Tcohneyn.github.io/</loc><lastmod>2026-09-22T15:46:03&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://Tcohneyn.github.io/tags/%E6%95%99%E7%A8%8B/</loc><lastmod>2026-09-22T15:46:03&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://Tcohneyn.github.io/ai-pet/</loc><lastmod>2026-09-11T23:12:20&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
+            <loc>https://Tcohneyn.github.io/ai-api/</loc><lastmod>2026-09-10T09:43:50&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+            <loc>https://Tcohneyn.github.io/tags/hugo/</loc><lastmod>2026-09-04T18:01:53&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+            <loc>https://Tcohneyn.github.io/categories/hugo/</loc><lastmod>2026-09-04T18:01:53&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+            <loc>https://Tcohneyn.github.io/hugo-liquid-glass/</loc><lastmod>2026-09-04T18:01:53&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+            <loc>https://Tcohneyn.github.io/hugo/</loc><lastmod>2026-08-29T10:55:53&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
             <loc>https://Tcohneyn.github.io/theme-documentation-basics/</loc><lastmod>2020-03-06T21:40:32&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://Tcohneyn.github.io/tags/installation/</loc><lastmod>2020-03-06T21:40:32&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://Tcohneyn.github.io/categories/documentation/</loc><lastmod>2020-06-12T10:10:13&#43;03:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>

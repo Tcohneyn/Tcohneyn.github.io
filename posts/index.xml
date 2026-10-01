@@ -4,7 +4,31 @@
         <link>https://Tcohneyn.github.io/posts/</link>
         <description>All Posts | Tcohneyn</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>minamichen@outlook.com (Tcohneyn)</managingEditor>
-            <webMaster>minamichen@outlook.com (Tcohneyn)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 04 Sep 2026 18:01:53 &#43;0800</lastBuildDate><atom:link href="https://Tcohneyn.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>minamichen@outlook.com (Tcohneyn)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 22 Sep 2026 15:46:03 &#43;0800</lastBuildDate><atom:link href="https://Tcohneyn.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Codex 第三方 API 中转站生图功能失败解决方案</title>
+    <link>https://Tcohneyn.github.io/ai-apiimage/</link>
+    <pubDate>Tue, 22 Sep 2026 15:46:03 &#43;0800</pubDate>
+    <author>minamichen@outlook.com (Tcohneyn)</author>
+    <guid>https://Tcohneyn.github.io/ai-apiimage/</guid>
+    <description><![CDATA[由于codex使用第三方api后自带的Image Gen工具无法生图，经过寻找发现有两种方法可以解决这个问题 使用Skill来代替原先工具 1.打]]></description>
+</item>
+<item>
+    <title>Codex 宠物功能教程 - 制作自定义小宠物</title>
+    <link>https://Tcohneyn.github.io/ai-pet/</link>
+    <pubDate>Fri, 11 Sep 2026 23:12:20 &#43;0800</pubDate>
+    <author>minamichen@outlook.com (Tcohneyn)</author>
+    <guid>https://Tcohneyn.github.io/ai-pet/</guid>
+    <description><![CDATA[Codex现在自带宠物功能，除了初始的9种宠物还可以自己设置自定义宠物，下面开始介绍这份功能。 下载成品自定义宠物 在Petdex网站开源了很多]]></description>
+</item>
+<item>
+    <title>Codex 第三方 API 接入笔记</title>
+    <link>https://Tcohneyn.github.io/ai-api/</link>
+    <pubDate>Thu, 10 Sep 2026 09:43:50 &#43;0800</pubDate>
+    <author>minamichen@outlook.com (Tcohneyn)</author>
+    <guid>https://Tcohneyn.github.io/ai-api/</guid>
+    <description><![CDATA[记录一次将 Codex 接入第三方 OpenAI-compatible API 的实践。 本文以 Windows 为例，工具名称以 codex++ 和 CC Switch 为例。不同版本的界面、菜单名称和配置字段可能略有差异，实际使用时应以工具仓]]></description>
+</item>
+<item>
     <title>主题文档 - Hugo液态玻璃效果</title>
     <link>https://Tcohneyn.github.io/hugo-liquid-glass/</link>
     <pubDate>Fri, 04 Sep 2026 18:01:53 &#43;0800</pubDate>
@@ -60,32 +84,6 @@
     <author>minamichen@outlook.com (Tcohneyn)</author>
     <guid>https://Tcohneyn.github.io/theme-documentation-echarts-shortcode/</guid>
     <description><![CDATA[<p><code>echarts</code> shortcode 使用 <a href="https://echarts.apache.org/" target="_blank" rel="noopener noreffer ">ECharts</a> 库提供数据可视化的功能.</p>]]></description>
-</item>
-<item>
-    <title>主题文档 - mapbox Shortcode</title>
-    <link>https://Tcohneyn.github.io/theme-documentation-mapbox-shortcode/</link>
-    <pubDate>Tue, 03 Mar 2020 13:29:59 &#43;0800</pubDate>
-    <author>minamichen@outlook.com (Tcohneyn)</author>
-    <guid>https://Tcohneyn.github.io/theme-documentation-mapbox-shortcode/</guid>
-    <description><![CDATA[<a href="https://github.com/dillonzq/LoveIt/releases/tag/v0.2.0" rel="noopener noreffer" target="_blank"></a>
-<p><code>mapbox</code> shortcode 使用 <a href="https://docs.mapbox.com/mapbox-gl-js" target="_blank" rel="noopener noreffer ">Mapbox GL JS</a> 库提供互动式地图的功能.</p>]]></description>
-</item>
-<item>
-    <title>主题文档 - music Shortcode</title>
-    <link>https://Tcohneyn.github.io/theme-documentation-music-shortcode/</link>
-    <pubDate>Tue, 03 Mar 2020 12:29:59 &#43;0800</pubDate>
-    <author>minamichen@outlook.com (Tcohneyn)</author>
-    <guid>https://Tcohneyn.github.io/theme-documentation-music-shortcode/</guid>
-    <description><![CDATA[<p><code>music</code> shortcode 基于 <a href="https://github.com/MoePlayer/APlayer" target="_blank" rel="noopener noreffer ">APlayer</a> 和 <a href="https://github.com/metowolf/MetingJS" target="_blank" rel="noopener noreffer ">MetingJS</a> 库提供了一个内嵌的响应式音乐播放器.</p>]]></description>
-</item>
-<item>
-    <title>主题文档 - bilibili Shortcode</title>
-    <link>https://Tcohneyn.github.io/theme-documentation-bilibili-shortcode/</link>
-    <pubDate>Tue, 03 Mar 2020 11:29:41 &#43;0800</pubDate>
-    <author>minamichen@outlook.com (Tcohneyn)</author>
-    <guid>https://Tcohneyn.github.io/theme-documentation-bilibili-shortcode/</guid>
-    <description><![CDATA[<a href="https://github.com/dillonzq/LoveIt/releases/tag/v0.2.0" rel="noopener noreffer" target="_blank"></a>
-<p><code>bilibili</code> shortcode 提供了一个内嵌的用来播放 bilibili 视频的响应式播放器.</p>]]></description>
 </item>
 </channel>
 </rss>

@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Codex 第三方 API 接入笔记 - Tcohneyn</title><meta name="Description" content="AI - Codex 第三方 API 接入笔记：使用 Codex&#43;&#43; 与 CC Switch."><meta property="og:url" content="https://Tcohneyn.github.io/ai-api/">
+  <meta property="og:site_name" content="Tcohneyn">
+  <meta property="og:title" content="Codex 第三方 API 接入笔记">
+  <meta property="og:description" content="AI - Codex 第三方 API 接入笔记：使用 Codex&#43;&#43; 与 CC Switch.">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-09-10T09:43:50+08:00">
+    <meta property="article:modified_time" content="2026-09-10T09:43:50+08:00">
+    <meta property="article:tag" content="教程">
+    <meta property="article:tag" content="AI">
+    <meta property="og:image" content="https://Tcohneyn.github.io/ai-api/featured-image.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://Tcohneyn.github.io/ai-api/featured-image.png">
+  <meta name="twitter:title" content="Codex 第三方 API 接入笔记">
+  <meta name="twitter:description" content="AI - Codex 第三方 API 接入笔记：使用 Codex&#43;&#43; 与 CC Switch.">
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/image/logo.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://Tcohneyn.github.io/ai-api/" /><link rel="prev" href="https://Tcohneyn.github.io/hugo-liquid-glass/" /><link rel="next" href="https://Tcohneyn.github.io/ai-pet/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Codex 第三方 API 接入笔记",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/Tcohneyn.github.io\/ai-api\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/Tcohneyn.github.io\/ai-api\/featured-image.png",
+                            "width":  1672 ,
+                            "height":  941 
+                        }],"genre": "posts","keywords": "教程, AI","wordcount":  3247 ,
+        "url": "https:\/\/Tcohneyn.github.io\/ai-api\/","datePublished": "2026-09-10T09:43:50+08:00","dateModified": "2026-09-10T09:43:50+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/Tcohneyn.github.io\/images\/avatar.png",
+                    "width":  649 ,
+                    "height":  643 
+                }},"author": {
+                "@type": "Person",
+                "name": "Tcohneyn"
+            },"description": "AI - Codex 第三方 API 接入笔记：使用 Codex++ 与 CC Switch."
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'dark';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Tcohneyn"><span class="header-title-pre"><i class='far fa-kiss-wink-heart' aria-hidden='true'></i></span>Tcohneyn</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/categories/documentation/"> 文档 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/Tcohneyn" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Tcohneyn"><span class="header-title-pre"><i class='far fa-kiss-wink-heart' aria-hidden='true'></i></span>Tcohneyn</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/categories/documentation/" title="">文档</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/Tcohneyn" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Codex 第三方 API 接入笔记</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>Tcohneyn</a></span>&nbsp;<span class="post-category">included in <a href="/categories/ai/"><i class="far fa-folder" aria-hidden="true"></i>AI</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2026-09-10">2026-09-10</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;3247 words&nbsp;
+                <i class="far fa-clock" aria-hidden="true"></i>&nbsp;7 minutes&nbsp;<span id="/ai-api/" class="leancloud_visitors" data-flag-title="Codex 第三方 API 接入笔记">
+                        <i class="far fa-eye" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
+                    </span>&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/ai-api/featured-image.png"
+        data-srcset="/ai-api/featured-image.png, /ai-api/featured-image.png 1.5x, /ai-api/featured-image.png 2x"
+        data-sizes="auto"
+        alt="/ai-api/featured-image.png"
+        title="AI - Codex 第三方 API 接入笔记：使用 Codex&#43;&#43; 与 CC Switch." /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-先理解整体结构">1. 先理解整体结构</a></li>
+    <li><a href="#2-codex-和-cc-switch-各自负责什么">2. Codex++ 和 CC Switch 各自负责什么</a>
+      <ul>
+        <li><a href="#21-codex">2.1 Codex++</a></li>
+        <li><a href="#22-cc-switch">2.2 CC Switch</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-准备第三方-api">3. 准备第三方 API</a></li>
+    <li><a href="#4-使用-cc-switch-添加-provider">4. 使用 CC Switch 添加 Provider</a>
+      <ul>
+        <li><a href="#41-新建-provider">4.1 新建 Provider</a></li>
+        <li><a href="#42-配置文件思路">4.2 配置文件思路</a></li>
+        <li><a href="#43-保存后检查">4.3 保存后检查</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-使用-codex-进行切换或启动">5. 使用 Codex++ 进行切换或启动</a></li>
+    <li><a href="#6-codex-原生配置思路">6. Codex 原生配置思路</a></li>
+    <li><a href="#7-用-curl-先验证-api再验证-codex">7. 用 curl 先验证 API，再验证 Codex</a>
+      <ul>
+        <li><a href="#71-chat-completions-兼容接口">7.1 Chat Completions 兼容接口</a></li>
+        <li><a href="#72-常见返回结果">7.2 常见返回结果</a></li>
+      </ul>
+    </li>
+    <li><a href="#8-常见问题排查">8. 常见问题排查</a>
+      <ul>
+        <li><a href="#81-401-unauthorized">8.1 <code>401 Unauthorized</code></a></li>
+        <li><a href="#82-404-not-found">8.2 <code>404 Not Found</code></a></li>
+        <li><a href="#83-400-bad-request">8.3 <code>400 Bad Request</code></a></li>
+        <li><a href="#84-能返回内容但-codex-不能正常工作">8.4 能返回内容，但 Codex 不能正常工作</a></li>
+        <li><a href="#85-修改配置后没有生效">8.5 修改配置后没有生效</a></li>
+      </ul>
+    </li>
+    <li><a href="#9-推荐的验证顺序">9. 推荐的验证顺序</a></li>
+    <li><a href="#10-安全注意事项">10. 安全注意事项</a></li>
+    <li><a href="#11-一份最小检查清单">11. 一份最小检查清单</a></li>
+    <li><a href="#12-总结">12. 总结</a></li>
+    <li><a href="#参考资料">参考资料</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><blockquote>
+<p>记录一次将 Codex 接入第三方 OpenAI-compatible API 的实践。</p>
+<p>本文以 Windows 为例，工具名称以 <code>codex++</code> 和 <code>CC Switch</code> 为例。不同版本的界面、菜单名称和配置字段可能略有差异，实际使用时应以工具仓库和本机版本为准。</p>
+</blockquote>
+<h2 id="1-先理解整体结构">1. 先理解整体结构</h2>
+<p>Codex 的第三方 API 接入，核心不是“修改模型名称”，而是配置一个兼容 OpenAI API 协议的 Provider：</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-text">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Codex
+</span></span><span class="line"><span class="cl">  -&gt; Provider 配置
+</span></span><span class="line"><span class="cl">  -&gt; base_url + API key + model
+</span></span><span class="line"><span class="cl">  -&gt; 第三方中转/聚合服务
+</span></span><span class="line"><span class="cl">  -&gt; 上游模型服务</span></span></code></pre></div></div>
+<p>通常需要准备三项信息：</p>
+<table>
+<thead>
+<tr>
+<th>配置项</th>
+<th>含义</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>base_url</code></td>
+<td>API 根地址，通常需要包含 <code>/v1</code></td>
+<td><code>https://example.com/v1</code></td>
+</tr>
+<tr>
+<td><code>api_key</code></td>
+<td>第三方平台签发的密钥</td>
+<td><code>sk-...</code></td>
+</tr>
+<tr>
+<td><code>model</code></td>
+<td>平台实际支持的模型名</td>
+<td><code>gpt-5</code>、<code>gpt-4.1</code> 或平台自定义名称</td>
+</tr>
+</tbody>
+</table>
+<p>最容易出错的地方是：第三方平台宣传的模型名，不一定等于 API 请求中真正需要填写的模型名。应优先查看平台的模型列表或接口文档。</p>
+<h2 id="2-codex-和-cc-switch-各自负责什么">2. Codex++ 和 CC Switch 各自负责什么</h2>
+<h3 id="21-codex">2.1 Codex++</h3>
+<p>这里把 [codex++](<a href="https://codexpp.cc/" target="_blank" rel="noopener noreffer ">Codex++ - Codex 桌面增强与管理工具</a>) 理解为 Codex 的增强启动、配置切换或环境管理工具。它通常适合做下面几类事情：</p>
+<ul>
+<li>快速选择不同的 Provider；</li>
+<li>管理多个 API 配置；</li>
+<li>注入环境变量；</li>
+<li>通过快捷方式启动不同的 Codex 配置；</li>
+<li>在多个账号、多个中转站之间切换。</li>
+</ul>
+<p>它并不一定是 API 服务本身。真正负责转发请求的，通常是第三方 API 平台或本地代理服务。</p>
+<h3 id="22-cc-switch">2.2 CC Switch</h3>
+<p><a href="https://ccswitch.io/zh/" target="_blank" rel="noopener noreffer ">CC Switch</a> 更适合作为配置管理和 Provider 切换工具。常见使用方式是：</p>
+<ol>
+<li>添加一个 OpenAI-compatible Provider；</li>
+<li>填写 API 地址、密钥和模型；</li>
+<li>选择当前生效的配置；</li>
+<li>由 CC Switch 写入或生成 Codex 使用的配置；</li>
+<li>启动 Codex 进行验证。</li>
+</ol>
+<p>可以把两者简单理解成：</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-text">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">CC Switch：管理和切换配置
+</span></span><span class="line"><span class="cl">Codex++：辅助启动、切换或增强使用体验
+</span></span><span class="line"><span class="cl">Codex：真正发起模型请求
+</span></span><span class="line"><span class="cl">第三方 API：接收并转发请求</span></span></code></pre></div></div>
+<h2 id="3-准备第三方-api">3. 准备第三方 API</h2>
+<p>选择第三方 API 时，至少确认以下信息：</p>
+<ul>
+<li>是否兼容 OpenAI API；</li>
+<li>是否支持 Codex 所需的请求格式；</li>
+<li>是否支持流式输出；</li>
+<li>是否支持目标模型；</li>
+<li><code>base_url</code> 是否要求 <code>/v1</code>；</li>
+<li>是否有额外的请求头或渠道参数；</li>
+<li>是否限制上下文长度、并发数或请求频率；</li>
+<li>是否会记录请求内容。</li>
+</ul>
+<p>一个通用的配置草稿如下：</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-text">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Provider name: my-provider
+</span></span><span class="line"><span class="cl">Base URL:      https://api.example.com/v1
+</span></span><span class="line"><span class="cl">API key:       sk-xxxxxxxx
+</span></span><span class="line"><span class="cl">Model:         your-model-name</span></span></code></pre></div></div>
+<p>我这里用的是<a href="https://cn.hb-api.online/home" target="_blank" rel="noopener noreffer ">百可为AI</a>。</p>
+<h2 id="4-使用-cc-switch-添加-provider">4. 使用 CC Switch 添加 Provider</h2>
+<h3 id="41-新建-provider">4.1 新建 Provider</h3>
+<p>打开 CC Switch，进入 Provider 或 API 配置页面，新建一个 OpenAI-compatible 配置。</p>
+<p>建议使用一个容易识别的名称，例如：</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-text">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">my-provider-gpt</span></span></code></pre></div></div>
+<p>然后填写：</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-text">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">API Base URL: https://api.example.com/v1
+</span></span><span class="line"><span class="cl">API Key:      sk-xxxxxxxx
+</span></span><span class="line"><span class="cl">Model:        your-model-name</span></span></code></pre></div></div>
+<p>如果 CC Switch 提供协议类型选项，优先选择：</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-text">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">OpenAI Compatible</span></span></code></pre></div></div>
+<p>如果工具要求分别填写“聊天接口”和“响应接口”，应先确认第三方平台支持哪一种协议。部分平台只兼容 Chat Completions，部分平台同时兼容 Responses API。</p>
+<p>一般来说中转站有直接导入CCSwitch的设置，这样比较方便，，配置好后如图所示：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./Snipaste_2026-09-10_15-33-49.png"
+        data-srcset="./Snipaste_2026-09-10_15-33-49.png, ./Snipaste_2026-09-10_15-33-49.png 1.5x, ./Snipaste_2026-09-10_15-33-49.png 2x"
+        data-sizes="auto"
+        alt="./Snipaste_2026-09-10_15-33-49.png"
+        title="./Snipaste_2026-09-10_15-33-49.png" /></p>
+<h3 id="42-配置文件思路">4.2 配置文件思路</h3>
+<p>不同版本可能采用不同的文件结构，但逻辑通常可以抽象为：</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-toml">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">providers</span><span class="p">.</span><span class="nx">my_provider</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;my-provider-gpt&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">base_url</span> <span class="p">=</span> <span class="s2">&#34;https://api.example.com/v1&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">api_key</span> <span class="p">=</span> <span class="s2">&#34;sk-xxxxxxxx&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">model</span> <span class="p">=</span> <span class="s2">&#34;your-model-name&#34;</span></span></span></code></pre></div></div>
+<p>上面只是结构示意，不能保证适用于所有 CC Switch 版本。若工具已经生成了配置文件，建议优先通过工具界面修改，不要手动改动未知字段。</p>
+<h3 id="43-保存后检查">4.3 保存后检查</h3>
+<p>保存配置后，重点检查：</p>
+<ul>
+<li>URL 是否多写或少写了 <code>/v1</code>；</li>
+<li>是否误填了网页地址而不是 API 地址；</li>
+<li>模型名大小写是否一致；</li>
+<li>API key 前后是否有空格；</li>
+<li>是否把 <code>Bearer </code> 一并填进了 API key 输入框；</li>
+<li>是否选择了刚刚创建的 Provider。</li>
+</ul>
+<h2 id="5-使用-codex-进行切换或启动">5. 使用 Codex++ 进行切换或启动</h2>
+<p>如果 Codex++ 提供 Provider 列表，可以为不同服务分别建立配置：</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-text">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">OpenAI 官方
+</span></span><span class="line"><span class="cl">公司内部网关
+</span></span><span class="line"><span class="cl">第三方聚合 API
+</span></span><span class="line"><span class="cl">本地兼容服务</span></span></code></pre></div></div>
+<p>建议每个 Provider 使用独立名称，不要反复覆盖同一个配置。例如：</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-text">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">official
+</span></span><span class="line"><span class="cl">company-gateway
+</span></span><span class="line"><span class="cl">third-party-fast
+</span></span><span class="line"><span class="cl">local-test</span></span></code></pre></div></div>
+<p>启动前确认当前生效的 Provider。很多“配置没有生效”的问题，实际原因只是切换工具仍然选中了另一个配置。</p>
+<p>如果 Codex++ 支持环境变量注入，也可以采用下面这种思路：</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-powershell">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nv">$env:OPENAI_API_KEY</span> <span class="p">=</span> <span class="s2">&#34;sk-xxxxxxxx&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$env:OPENAI_BASE_URL</span> <span class="p">=</span> <span class="s2">&#34;https://api.example.com/v1&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">codex</span></span></span></code></pre></div></div>
+<p>变量名称会因工具和版本不同而变化。若环境变量没有效果，应以 Codex 的实际配置文件和启动日志为准。</p>
+<p>Codex++支持导入CCswitch的配置，建议直接导入比较方便。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./Snipaste_2026-09-10_15-36-31.png"
+        data-srcset="./Snipaste_2026-09-10_15-36-31.png, ./Snipaste_2026-09-10_15-36-31.png 1.5x, ./Snipaste_2026-09-10_15-36-31.png 2x"
+        data-sizes="auto"
+        alt="./Snipaste_2026-09-10_15-36-31.png"
+        title="./Snipaste_2026-09-10_15-36-31.png" /></p>
+<h2 id="6-codex-原生配置思路">6. Codex 原生配置思路</h2>
+<p>Codex 的配置一般位于用户目录下的配置文件中，常见文件名是：</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-text">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">~/.codex/config.toml</span></span></code></pre></div></div>
+<p>Windows 下对应的用户目录通常可以通过环境变量确认：</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-powershell">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nv">$HOME</span></span></span></code></pre></div></div>
+<p>一个概念性的 Provider 配置示例：</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-toml">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">model_providers</span><span class="p">.</span><span class="nx">my_provider</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;my-provider&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">base_url</span> <span class="p">=</span> <span class="s2">&#34;https://api.example.com/v1&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">env_key</span> <span class="p">=</span> <span class="s2">&#34;MY_PROVIDER_API_KEY&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">profiles</span><span class="p">.</span><span class="nx">third_party</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">model_provider</span> <span class="p">=</span> <span class="s2">&#34;my_provider&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">model</span> <span class="p">=</span> <span class="s2">&#34;your-model-name&#34;</span></span></span></code></pre></div></div>
+<p>注意：具体字段名会随 Codex 版本变化。不要直接复制这段配置覆盖现有文件，先查看当前版本的配置文档或由 CC Switch 自动生成配置。</p>
+<p>如果使用环境变量保存密钥，可以这样做：</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-powershell">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="p">[</span><span class="no">Environment</span><span class="p">]::</span><span class="n">SetEnvironmentVariable</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;MY_PROVIDER_API_KEY&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;sk-xxxxxxxx&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;User&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span></span></span></code></pre></div></div>
+<p>设置后需要重新打开终端或重启相关程序，确保新环境变量被读取。</p>
+<h2 id="7-用-curl-先验证-api再验证-codex">7. 用 curl 先验证 API，再验证 Codex</h2>
+<p>在排查问题时，建议先绕开 Codex，用最小请求验证第三方 API。这样可以区分“API 不通”和“Codex 配置错误”。</p>
+<h3 id="71-chat-completions-兼容接口">7.1 Chat Completions 兼容接口</h3>
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
+    <div class="code-header language-powershell">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nv">$headers</span> <span class="p">=</span> <span class="vm">@</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">Authorization</span> <span class="p">=</span> <span class="s2">&#34;Bearer </span><span class="nv">$env:MY_PROVIDER_API_KEY</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;Content-Type&#34;</span> <span class="p">=</span> <span class="s2">&#34;application/json&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$body</span> <span class="p">=</span> <span class="vm">@</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">model</span> <span class="p">=</span> <span class="s2">&#34;your-model-name&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">messages</span> <span class="p">=</span> <span class="vm">@</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="vm">@</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">role</span> <span class="p">=</span> <span class="s2">&#34;user&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">content</span> <span class="p">=</span> <span class="s2">&#34;请只回复：连接成功&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="p">|</span> <span class="nb">ConvertTo-Json</span> <span class="n">-Depth</span> <span class="mf">5</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">Invoke-RestMethod</span> <span class="p">`</span>
+</span></span><span class="line"><span class="cl">  <span class="n">-Method</span> <span class="n">Post</span> <span class="p">`</span>
+</span></span><span class="line"><span class="cl">  <span class="n">-Uri</span> <span class="s2">&#34;https://api.example.com/v1/chat/completions&#34;</span> <span class="p">`</span>
+</span></span><span class="line"><span class="cl">  <span class="n">-Headers</span> <span class="nv">$headers</span> <span class="p">`</span>
+</span></span><span class="line"><span class="cl">  <span class="n">-Body</span> <span class="nv">$body</span></span></span></code></pre></div></div>
+<h3 id="72-常见返回结果">7.2 常见返回结果</h3>
+<p>成功时，通常可以看到类似以下结构：</p>
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
+    <div class="code-header language-json">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;id&#34;</span><span class="p">:</span> <span class="s2">&#34;chatcmpl-xxx&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;choices&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;message&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;role&#34;</span><span class="p">:</span> <span class="s2">&#34;assistant&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;content&#34;</span><span class="p">:</span> <span class="s2">&#34;连接成功&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<p>如果这个请求失败，就先不要继续排查 Codex，优先检查第三方 API 的地址、密钥、模型名和协议兼容性。</p>
+<h2 id="8-常见问题排查">8. 常见问题排查</h2>
+<h3 id="81-401-unauthorized">8.1 <code>401 Unauthorized</code></h3>
+<p>可能原因：</p>
+<ul>
+<li>API key 错误、过期或被撤销；</li>
+<li>Authorization 头格式错误；</li>
+<li>把 <code>sk-...</code> 填到了 URL 中；</li>
+<li>CC Switch 仍在使用旧密钥；</li>
+<li>第三方平台要求额外的渠道密钥。</li>
+</ul>
+<p>处理方式：</p>
+<ol>
+<li>在第三方平台重新生成或复制 API key；</li>
+<li>删除输入框前后的空格；</li>
+<li>重新保存 Provider；</li>
+<li>重新启动 CC Switch 和 Codex；</li>
+<li>用最小 curl 请求确认密钥本身有效。</li>
+</ol>
+<h3 id="82-404-not-found">8.2 <code>404 Not Found</code></h3>
+<p>最常见原因是 <code>base_url</code> 层级不对。例如工具会自动拼接 <code>/chat/completions</code>，但你把完整接口地址填成了 <code>base_url</code>：</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-text">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">错误： https://api.example.com/v1/chat/completions
+</span></span><span class="line"><span class="cl">正确： https://api.example.com/v1</span></span></code></pre></div></div>
+<p>也有些平台的根地址不带 <code>/v1</code>，不能机械添加。以平台文档为准。</p>
+<h3 id="83-400-bad-request">8.3 <code>400 Bad Request</code></h3>
+<p>通常与请求协议或模型名有关：</p>
+<ul>
+<li>模型名称不存在；</li>
+<li>第三方只支持 Chat Completions，但客户端发送了另一种请求；</li>
+<li>第三方不支持 Codex 使用的某些参数；</li>
+<li>消息格式或工具调用格式不兼容。</li>
+</ul>
+<p>如果普通对话能用，但工具调用、代码执行或长上下文失败，通常说明只是“部分兼容”，而不是完全兼容。</p>
+<h3 id="84-能返回内容但-codex-不能正常工作">8.4 能返回内容，但 Codex 不能正常工作</h3>
+<p>第三方 API 可能只实现了最基础的文本对话接口，没有完整实现 Codex 所需能力，例如：</p>
+<ul>
+<li>流式事件不完整；</li>
+<li>工具调用格式不兼容；</li>
+<li>响应字段与 OpenAI 标准不同；</li>
+<li>不支持长上下文；</li>
+<li>不支持结构化输出；</li>
+<li>不接受系统消息或特殊参数。</li>
+</ul>
+<p>这类情况下，需要查看第三方平台的兼容性说明，或者换用明确声明支持 Codex/Responses API 的服务。</p>
+<h3 id="85-修改配置后没有生效">8.5 修改配置后没有生效</h3>
+<p>依次检查：</p>
+<ol>
+<li>当前启动的 Codex 是否读取了目标配置目录；</li>
+<li>CC Switch 是否真的切换到了目标 Provider；</li>
+<li>是否存在环境变量覆盖配置文件；</li>
+<li>是否有多个 Codex 安装或多个用户目录；</li>
+<li>是否需要完全重启终端和 Codex。</li>
+</ol>
+<p>可以先在 PowerShell 中查看相关环境变量：</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-powershell">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Get-ChildItem</span> <span class="n">Env</span><span class="err">:</span> <span class="p">|</span> <span class="nb">Where-Object</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">$_</span><span class="p">.</span><span class="py">Name</span> <span class="o">-match</span> <span class="s2">&#34;OPENAI|CODEX|PROVIDER|API&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<h2 id="9-推荐的验证顺序">9. 推荐的验证顺序</h2>
+<p>不要一上来就同时修改多个地方，建议按下面顺序操作：</p>
+<ol>
+<li>确认第三方平台账号和余额可用；</li>
+<li>确认模型名；</li>
+<li>用 curl 验证 API 地址和密钥；</li>
+<li>在 CC Switch 中创建 Provider；</li>
+<li>切换 Provider 后重启 Codex++；</li>
+<li>发送一句最简单的测试消息；</li>
+<li>再测试长文本、代码生成和工具调用；</li>
+<li>最后再配置多个 Provider 和快捷切换。</li>
+</ol>
+<p>这样每一步只有一个变量变化，排错会快很多。</p>
+<h2 id="10-安全注意事项">10. 安全注意事项</h2>
+<ul>
+<li>不要把真实 API key 提交到 Git；</li>
+<li>不要把带密钥的配置文件发到群聊或博客；</li>
+<li>不要在截图中暴露完整密钥；</li>
+<li>给不同服务使用不同的密钥；</li>
+<li>尽量设置额度、频率和来源限制；</li>
+<li>定期删除不用的密钥；</li>
+<li>第三方中转服务可能记录请求内容，敏感代码和隐私数据不要直接发送；</li>
+<li>公司代码接入第三方服务前，应先确认公司的数据合规要求。</li>
+</ul>
+<p>可以在项目目录中加入忽略规则：</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-gitignore">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code class="language-gitignore" data-lang="gitignore">.env
+*.secret.toml
+config.local.toml</code></pre></div>
+<h2 id="11-一份最小检查清单">11. 一份最小检查清单</h2>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-text">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[ ] 第三方 API 确认支持 OpenAI-compatible
+</span></span><span class="line"><span class="cl">[ ] base_url 填的是根地址，不是完整请求地址
+</span></span><span class="line"><span class="cl">[ ] API key 没有多余空格
+</span></span><span class="line"><span class="cl">[ ] model 名称与平台控制台一致
+</span></span><span class="line"><span class="cl">[ ] curl 最小请求成功
+</span></span><span class="line"><span class="cl">[ ] CC Switch 已保存并选中正确 Provider
+</span></span><span class="line"><span class="cl">[ ] Codex++ 已重新启动
+</span></span><span class="line"><span class="cl">[ ] 没有环境变量覆盖配置
+</span></span><span class="line"><span class="cl">[ ] 没有在日志或截图中暴露密钥</span></span></code></pre></div></div>
+<h2 id="12-总结">12. 总结</h2>
+<p>使用 <code>codex++</code> 和 <code>CC Switch</code> 接入第三方 API，本质上是管理并切换 Codex 的 Provider 配置。最关键的三项参数是：</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-text">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">base_url
+</span></span><span class="line"><span class="cl">api_key
+</span></span><span class="line"><span class="cl">model</span></span></code></pre></div></div>
+<p>实际操作中，先用 curl 验证 API，再交给 CC Switch 管理配置，最后通过 Codex++ 进行启动或切换，会更容易定位问题。</p>
+<p>需要特别注意：第三方 API 的“OpenAI-compatible”通常只代表基础接口兼容，不代表一定完整支持 Codex 的所有能力。普通文本请求成功后，还应继续验证流式输出、长上下文、工具调用和实际代码工作流。</p>
+<h2 id="参考资料">参考资料</h2>
+<ul>
+<li><a href="https://platform.openai.com/docs/" target="_blank" rel="noopener noreffer ">OpenAI API 官方文档</a></li>
+<li><a href="https://developers.openai.com/" target="_blank" rel="noopener noreffer ">OpenAI Developers</a></li>
+<li><a href="https://github.com/farion1231/cc-switch" target="_blank" rel="noopener noreffer ">CC Switch GitHub 仓库</a></li>
+<li><a href="https://github.com/farion1231/cc-switch/wiki" target="_blank" rel="noopener noreffer ">CC Switch 文档</a></li>
+</ul>
+<blockquote>
+<p>参考链接和配置字段可能随项目版本更新。发布前建议再次打开对应项目主页，确认当前版本的字段和菜单名称。</p>
+</blockquote>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2026-09-10</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/ai-api/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://Tcohneyn.github.io/ai-api/" data-title="Codex 第三方 API 接入笔记"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://Tcohneyn.github.io/ai-api/" data-title="Codex 第三方 API 接入笔记"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 百度" data-sharer="baidu" data-url="https://Tcohneyn.github.io/ai-api/" data-title="Codex 第三方 API 接入笔记"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/baidu.svg" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<a href="/tags/%E6%95%99%E7%A8%8B/">教程</a>,&nbsp;<a href="/tags/ai/">AI</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/hugo-liquid-glass/" class="prev" rel="prev" title="主题文档 - Hugo液态玻璃效果"><i class="fas fa-angle-left" aria-hidden="true"></i>主题文档 - Hugo液态玻璃效果</a>
+            <a href="/ai-pet/" class="next" rel="next" title="Codex 宠物功能教程 - 制作自定义小宠物">Codex 宠物功能教程 - 制作自定义小宠物<i class="fas fa-angle-right" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><div id="particles-js"></div>
+
+<script src=https://Tcohneyn.github.io/background/particles.min.js></script>
+<script>
+  particlesJS.load('particles-js', "https://Tcohneyn.github.io/background/particlesjs-config.json", function() {
+    console.log('particles.js loaded - callback');
+  });
+</script>
+
+<style>
+  #particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+</style>
+
+
+</div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><script src="https://cdn.jsdelivr.net/npm/valine@1.5.3/dist/Valine.min.js"></script><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/algoliasearch@5.20.2/dist/lite/builds/browser.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{"valine":{"appId":"QGzwQXOqs5JOhN4RGPOkR2mR-MdYXbMMI","appKey":"WBmoGyJtbqUswvfLh6L8iEBr","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@15.1.2/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"en","pageSize":10,"placeholder":"Your comment ...","recordIP":true,"serverURLs":"https://valine.hugoloveit.com","visitor":true}},"search":{"algoliaAppID":"GZT24PWKNT","algoliaIndex":"index","algoliaSearchKey":"634ab679e825b815de2663de38908f9d","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50,"type":"algolia"}};</script><script src="/js/theme.min.js"></script></body>
+</html>
