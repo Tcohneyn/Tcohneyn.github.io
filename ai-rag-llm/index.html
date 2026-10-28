@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>AI LLM - Tcohneyn</title><meta name="Description" content="AI - RAG笔记中LLM概述"><meta property="og:url" content="https://Tcohneyn.github.io/ai-rag-llm/">
+  <meta property="og:site_name" content="Tcohneyn">
+  <meta property="og:title" content="AI LLM">
+  <meta property="og:description" content="AI - RAG笔记中LLM概述">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-10-16T23:47:29+08:00">
+    <meta property="article:modified_time" content="2026-10-16T23:47:29+08:00">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="RAG">
+    <meta property="og:image" content="https://Tcohneyn.github.io/ai-rag-llm/featured-image.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://Tcohneyn.github.io/ai-rag-llm/featured-image.png">
+  <meta name="twitter:title" content="AI LLM">
+  <meta name="twitter:description" content="AI - RAG笔记中LLM概述">
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/image/logo.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://Tcohneyn.github.io/ai-rag-llm/" /><link rel="prev" href="https://Tcohneyn.github.io/ai-rag-overview/" /><link rel="next" href="https://Tcohneyn.github.io/ai-rag-information-retrieval-and-search-foundations/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "AI LLM",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/Tcohneyn.github.io\/ai-rag-llm\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/Tcohneyn.github.io\/ai-rag-llm\/featured-image.png",
+                            "width":  1671 ,
+                            "height":  941 
+                        }],"genre": "posts","keywords": "AI, RAG","wordcount":  2569 ,
+        "url": "https:\/\/Tcohneyn.github.io\/ai-rag-llm\/","datePublished": "2026-10-16T23:47:29+08:00","dateModified": "2026-10-16T23:47:29+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/Tcohneyn.github.io\/images\/avatar.png",
+                    "width":  649 ,
+                    "height":  643 
+                }},"author": {
+                "@type": "Person",
+                "name": "Tcohneyn"
+            },"description": "AI - RAG笔记中LLM概述"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'dark';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Tcohneyn"><span class="header-title-pre"><i class='far fa-kiss-wink-heart' aria-hidden='true'></i></span>Tcohneyn</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/categories/documentation/"> 文档 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/Tcohneyn" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Tcohneyn"><span class="header-title-pre"><i class='far fa-kiss-wink-heart' aria-hidden='true'></i></span>Tcohneyn</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/categories/documentation/" title="">文档</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/Tcohneyn" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">AI LLM</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>Tcohneyn</a></span>&nbsp;<span class="post-category">included in <a href="/categories/ai/"><i class="far fa-folder" aria-hidden="true"></i>AI</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2026-10-16">2026-10-16</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;2569 words&nbsp;
+                <i class="far fa-clock" aria-hidden="true"></i>&nbsp;6 minutes&nbsp;<span id="/ai-rag-llm/" class="leancloud_visitors" data-flag-title="AI LLM">
+                        <i class="far fa-eye" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
+                    </span>&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/ai-rag-llm/featured-image.png"
+        data-srcset="/ai-rag-llm/featured-image.png, /ai-rag-llm/featured-image.png 1.5x, /ai-rag-llm/featured-image.png 2x"
+        data-sizes="auto"
+        alt="/ai-rag-llm/featured-image.png"
+        title="AI - RAG笔记中LLM概述" /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#rag-学习笔记大语言模型llm的工作原理">RAG 学习笔记：大语言模型（LLM）的工作原理</a></li>
+    <li><a href="#一核心知识点概览">一、核心知识点概览</a></li>
+    <li><a href="#二llm-是如何生成文本的">二、LLM 是如何生成文本的？</a>
+      <ul>
+        <li><a href="#1-本质预测下一个-token">1. 本质：预测下一个 Token</a></li>
+        <li><a href="#2-什么是-token">2. 什么是 Token？</a></li>
+        <li><a href="#3-模型生成文本的完整流程">3. 模型生成文本的完整流程</a></li>
+        <li><a href="#4-什么是自回归autoregressive">4. 什么是自回归（Autoregressive）？</a></li>
+      </ul>
+    </li>
+    <li><a href="#三llm-是如何训练出来的">三、LLM 是如何训练出来的？</a></li>
+    <li><a href="#四为什么-llm-会产生幻觉">四、为什么 LLM 会产生幻觉？</a></li>
+    <li><a href="#五rag-为什么能够改善-llm-的回答">五、RAG 为什么能够改善 LLM 的回答？</a>
+      <ul>
+        <li><a href="#普通-llm-与-rag-的区别">普通 LLM 与 RAG 的区别</a>
+          <ul>
+            <li><a href="#普通-llm">普通 LLM</a></li>
+            <li><a href="#rag-系统">RAG 系统</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#六为什么不能把所有资料都塞进-prompt">六、为什么不能把所有资料都塞进 Prompt？</a></li>
+    <li><a href="#七本节必须记住的专业术语">七、本节必须记住的专业术语</a></li>
+    <li><a href="#八最终总结">八、最终总结</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="rag-学习笔记大语言模型llm的工作原理">RAG 学习笔记：大语言模型（LLM）的工作原理</h2>
+<h2 id="一核心知识点概览">一、核心知识点概览</h2>
+<ol>
+<li>LLM 的本质</li>
+</ol>
+<p>根据已有上下文，预测下一个 Token，并不断重复，生成完整文本。</p>
+<ol start="2">
+<li>模型如何学习</li>
+</ol>
+<p>通过大量文本训练，学习语言规律、知识关联和上下文模式，并调整内部参数。</p>
+<ol start="3">
+<li>为什么会产生幻觉</li>
+</ol>
+<p>模型擅长生成看起来合理的内容，但合理不等于真实，尤其是在缺少相关信息时。</p>
+<ol start="4">
+<li>RAG 如何改善回答</li>
+</ol>
+<p>先检索相关资料，再把资料加入提示词，让模型根据这些上下文生成回答。</p>
+<h2 id="二llm-是如何生成文本的">二、LLM 是如何生成文本的？</h2>
+<h3 id="1-本质预测下一个-token">1. 本质：预测下一个 Token</h3>
+<p>视频用一个简单的英文句子解释：</p>
+<blockquote>
+<p>What a beautiful day, the sun is &hellip;</p>
+</blockquote>
+<p>模型可能预测出：</p>
+<ul>
+<li>shining（正在照耀）</li>
+<li>rising（正在升起）</li>
+<li>out（出来了）</li>
+<li>exploding（爆炸了）</li>
+</ul>
+<p>其中，shining 可能是更符合语境的选择，但 exploding 在语法上也可能成立，只是不符合通常的现实情况。</p>
+<p>这说明：模型生成的内容不仅受语法影响，还受训练中学到的语言模式和上下文关系影响。</p>
+<p>严格来说，LLM 不是简单地预测完整的下一个单词，而是预测下一个 Token。</p>
+<h3 id="2-什么是-token">2. 什么是 Token？</h3>
+<p>Token 是模型处理文本的基本单位，可以是一个完整单词、单词的一部分、标点符号等。</p>
+<p>例如，下面只是一个示意性的拆分，并不代表某个具体模型的实际分词结果：</p>
+<p>原始文本</p>
+<p><strong>Unhappiness!</strong></p>
+<p>可能的 Token 划分</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code>Un
+happi
+ness
+!</code></pre></div>
+<p>采用 Token 机制有几个好处：</p>
+<ul>
+<li>不必为每个可能出现的单词都单独建立词表。</li>
+<li>可以组合较小的文本片段来表示生僻词和新词。</li>
+<li>标点、数字和多语言文本也可以通过 Token 进行处理。</li>
+</ul>
+<h3 id="3-模型生成文本的完整流程">3. 模型生成文本的完整流程</h3>
+<p>输入 Prompt（提示词）</p>
+<p>问题、指令、对话历史、相关资料</p>
+<p>分析当前上下文</p>
+<p>通过神经网络计算上下文中的关联</p>
+<p>计算下一个 Token 的概率分布</p>
+<p>不同候选 Token 对应不同概率</p>
+<p>选择并输出一个 Token</p>
+<p>具体选择受解码策略等因素影响</p>
+<p>重复上述过程，直到生成结束</p>
+<p>注意：视频用随机选择来解释生成过程，方便理解。但实际模型不一定每次都随机采样，也可以采用贪心选择等解码策略。</p>
+<h3 id="4-什么是自回归autoregressive">4. 什么是自回归（Autoregressive）？</h3>
+<p>自回归是指：模型生成的每个新 Token，都会成为后续生成过程的上下文之一。</p>
+<p>例如：</p>
+<ul>
+<li>第一种路径：太阳正在发光 → 照亮天空。</li>
+<li>第二种路径：太阳正在发热 → 温暖我们的脸。</li>
+</ul>
+<p>前面选择的词不同，后续生成的内容也会不同。</p>
+<p>这也解释了为什么同一个提示词在不同生成条件下，可能得到不同的回答。</p>
+<h2 id="三llm-是如何训练出来的">三、LLM 是如何训练出来的？</h2>
+<p>视频介绍了模型训练的基本思路。</p>
+<p>步骤 1：准备训练文本</p>
+<p>收集大量文本数据，例如文章、书籍和互联网内容。</p>
+<p>步骤 2：预测下一个 Token</p>
+<p>向模型提供一段不完整的文本，让它预测后续内容。</p>
+<p>步骤 3：计算预测误差</p>
+<p>将预测结果与训练数据中的实际下一个 Token 进行比较。</p>
+<p>步骤 4：更新模型参数</p>
+<p>通过优化算法调整神经网络的参数，逐步改善预测能力。</p>
+<p>模型经过大量训练后，能够学习到语言结构、事实关联、不同文体的特征，以及一定程度的上下文推理能力。</p>
+<p>这里有一个重要区别：模型参数中学到的知识，并不等于一份可以直接检索、逐条核对的数据库。模型也不保证能准确回忆所有训练内容。</p>
+<h2 id="四为什么-llm-会产生幻觉">四、为什么 LLM 会产生幻觉？</h2>
+<p>幻觉（Hallucination）是指模型生成了看起来可信、实际上却错误或缺乏依据的内容。</p>
+<p>视频重点强调了一个原因：</p>
+<p>LLM 的训练目标与事实核验并不是同一件事。</p>
+<p>模型学习的是如何根据上下文生成合适的 Token。虽然这种能力能够产生大量准确的回答，但也可能产生听起来很合理的错误内容。</p>
+<p>例如，你问模型：</p>
+<blockquote>
+<p>我们公司上周内部会议决定了什么？</p>
+</blockquote>
+<p>如果模型没有接触过会议记录，它就缺乏回答这个问题所需的信息。即使它生成了一段流畅、具体的回答，也不能证明这些内容是真的。</p>
+<p>常见的幻觉风险包括：</p>
+<ul>
+<li>编造不存在的事实、人物或事件。</li>
+<li>把多个真实信息错误地组合在一起。</li>
+<li>对不确定的问题给出过于肯定的回答。</li>
+<li>回答涉及最新新闻或内部资料的问题时，缺乏可靠依据。</li>
+</ul>
+<p>因此，判断回答质量时，不能只看表达是否流畅，还要看内容有没有证据支持。</p>
+<h2 id="五rag-为什么能够改善-llm-的回答">五、RAG 为什么能够改善 LLM 的回答？</h2>
+<p>这是本段视频最重要的结论。</p>
+<p>RAG 的全称是 Retrieval-Augmented Generation，即检索增强生成。</p>
+<p>它的核心思想不是要求模型凭空记住更多知识，而是在回答问题时，先为模型找到相关资料，再让模型利用这些资料回答。</p>
+<h3 id="普通-llm-与-rag-的区别">普通 LLM 与 RAG 的区别</h3>
+<h4 id="普通-llm">普通 LLM</h4>
+<p>用户提问</p>
+<p>模型根据已有上下文生成回答</p>
+<p>风险：缺少必要知识时，可能猜测或产生幻觉。</p>
+<h4 id="rag-系统">RAG 系统</h4>
+<p>用户提问</p>
+<p>检索相关文档</p>
+<p>问题 + 检索资料 → LLM</p>
+<p>优势：为模型提供额外的事实依据和上下文。</p>
+<p>举个例子，假设你在开发一个 UE5 项目，想让 AI 回答项目中的 GAS 使用规范。</p>
+<p>普通 LLM 可能只能根据通用的 Unreal Engine 知识回答，而不一定知道你项目里的具体类名、蓝图配置和内部约定。</p>
+<p>使用 RAG 后，可以先从项目文档、代码说明或开发规范中检索相关内容，再将其放进 Prompt，让模型依据这些材料回答。</p>
+<p>这样，模型就有机会利用训练数据中原本没有的项目专属信息。</p>
+<p>不过，RAG 不能保证彻底消除幻觉：如果检索结果不相关、不完整或过时，模型仍然可能回答错误。</p>
+<h2 id="六为什么不能把所有资料都塞进-prompt">六、为什么不能把所有资料都塞进 Prompt？</h2>
+<p>既然模型可以理解上下文，为什么不直接把整个知识库都交给它？</p>
+<p>视频给出了两个主要原因。</p>
+<table>
+<thead>
+<tr>
+<th>限制</th>
+<th>具体含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>计算成本</td>
+<td>输入的上下文越长，处理它通常就越耗费计算资源与时间。</td>
+</tr>
+<tr>
+<td>上下文窗口限制</td>
+<td>模型一次能够处理的 Token 数量有限，输入可能超过上限。</td>
+</tr>
+</tbody>
+</table>
+<p>上下文窗口（Context Window）是模型单次处理时能够容纳的上下文范围，通常以 Token 数量衡量。</p>
+<p>例如，你的知识库有数千份文档，而用户只问一个具体问题。把所有文档都加入 Prompt，既浪费资源，也可能挤占真正重要的信息。</p>
+<p>因此，RAG 不仅需要找到资料，还需要尽可能找到与当前问题相关、足够准确且数量合适的资料。</p>
+<p>这就引出了接下来要学习的另一个核心组件：Retriever（检索器）。</p>
+<h2 id="七本节必须记住的专业术语">七、本节必须记住的专业术语</h2>
+<table>
+<thead>
+<tr>
+<th>术语</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LLM</td>
+<td>大语言模型，Large Language Model</td>
+</tr>
+<tr>
+<td>Token</td>
+<td>模型处理和生成文本的基本单位</td>
+</tr>
+<tr>
+<td>Prompt</td>
+<td>提供给模型的输入提示与上下文</td>
+</tr>
+<tr>
+<td>Completion</td>
+<td>模型根据输入生成的后续文本</td>
+</tr>
+<tr>
+<td>Probability Distribution</td>
+<td>下一个 Token 的概率分布</td>
+</tr>
+<tr>
+<td>Autoregressive</td>
+<td>自回归，前面生成的内容影响后续生成</td>
+</tr>
+<tr>
+<td>Parameters</td>
+<td>神经网络中的可训练参数</td>
+</tr>
+<tr>
+<td>Hallucination</td>
+<td>幻觉，生成缺乏事实依据或不正确的内容</td>
+</tr>
+<tr>
+<td>Context Window</td>
+<td>模型单次处理的上下文容量</td>
+</tr>
+<tr>
+<td>RAG</td>
+<td>检索增强生成</td>
+</tr>
+<tr>
+<td>Retriever</td>
+<td>检索器，为当前问题寻找相关资料</td>
+</tr>
+</tbody>
+</table>
+<h2 id="八最终总结">八、最终总结</h2>
+<p>这一节可以归纳成下面四句话：</p>
+<ol>
+<li>LLM 通过预测下一个 Token 来生成文本。</li>
+<li>模型通过大量训练数据学习语言模式和知识关联，但不保证每个回答都真实。</li>
+<li>RAG 通过检索外部资料并将其加入 Prompt，为模型提供额外的上下文依据。</li>
+<li>上下文存在计算成本和容量限制，所以检索器必须筛选真正相关的信息。</li>
+</ol>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2026-10-16</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/ai-rag-llm/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://Tcohneyn.github.io/ai-rag-llm/" data-title="AI LLM"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://Tcohneyn.github.io/ai-rag-llm/" data-title="AI LLM"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 百度" data-sharer="baidu" data-url="https://Tcohneyn.github.io/ai-rag-llm/" data-title="AI LLM"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@15.14.0/icons/baidu.svg" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<a href="/tags/ai/">AI</a>,&nbsp;<a href="/tags/rag/">RAG</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/ai-rag-overview/" class="prev" rel="prev" title="AI RAG概述"><i class="fas fa-angle-left" aria-hidden="true"></i>AI RAG概述</a>
+            <a href="/ai-rag-information-retrieval-and-search-foundations/" class="next" rel="next" title="AI 信息检索和搜索基础">AI 信息检索和搜索基础<i class="fas fa-angle-right" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><div id="particles-js"></div>
+
+<script src=https://Tcohneyn.github.io/background/particles.min.js></script>
+<script>
+  particlesJS.load('particles-js', "https://Tcohneyn.github.io/background/particlesjs-config.json", function() {
+    console.log('particles.js loaded - callback');
+  });
+</script>
+
+<style>
+  #particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+</style>
+
+
+</div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><script src="https://cdn.jsdelivr.net/npm/valine@1.5.3/dist/Valine.min.js"></script><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/algoliasearch@5.20.2/dist/lite/builds/browser.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{"valine":{"appId":"QGzwQXOqs5JOhN4RGPOkR2mR-MdYXbMMI","appKey":"WBmoGyJtbqUswvfLh6L8iEBr","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@15.1.2/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"en","pageSize":10,"placeholder":"Your comment ...","recordIP":true,"serverURLs":"https://valine.hugoloveit.com","visitor":true}},"search":{"algoliaAppID":"GZT24PWKNT","algoliaIndex":"index","algoliaSearchKey":"634ab679e825b815de2663de38908f9d","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50,"type":"algolia"}};</script><script src="/js/theme.min.js"></script></body>
+</html>

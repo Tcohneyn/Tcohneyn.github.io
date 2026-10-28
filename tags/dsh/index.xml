@@ -1,0 +1,24 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>DSH - Tag - Tcohneyn</title>
+        <link>https://Tcohneyn.github.io/tags/dsh/</link>
+        <description>DSH - Tag - Tcohneyn</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>minamichen@outlook.com (Tcohneyn)</managingEditor>
+            <webMaster>minamichen@outlook.com (Tcohneyn)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 24 Oct 2026 00:14:29 &#43;0800</lastBuildDate><atom:link href="https://Tcohneyn.github.io/tags/dsh/" rel="self" type="application/rss+xml" /><item>
+    <title>DSH框架</title>
+    <link>https://Tcohneyn.github.io/dsh-architecture/</link>
+    <pubDate>Sat, 24 Oct 2026 00:14:29 &#43;0800</pubDate>
+    <author>minamichen@outlook.com (Tcohneyn)</author>
+    <guid>https://Tcohneyn.github.io/dsh-architecture/</guid>
+    <description><![CDATA[最近DSH插件生态越来越丰富，所以花了一点时间来了解了一下DSH的框架。 一句话总结 DSH 基于 Cordis 插件机制，将 Agent 的能力（模型适配、工具注册、日志、a]]></description>
+</item>
+<item>
+    <title>DSH好用的插件总结</title>
+    <link>https://Tcohneyn.github.io/dsh-plugin/</link>
+    <pubDate>Wed, 21 Oct 2026 17:30:45 &#43;0800</pubDate>
+    <author>minamichen@outlook.com (Tcohneyn)</author>
+    <guid>https://Tcohneyn.github.io/dsh-plugin/</guid>
+    <description><![CDATA[前言 最近发现DSH有趣好用的插件越来越多，就想着单独写一篇用来总结用过的有趣的插件，后续还会更新。。。 DSH刷b站插件 第一种 源码：GitHu]]></description>
+</item>
+</channel>
+</rss>

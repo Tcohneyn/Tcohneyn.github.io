@@ -4,12 +4,28 @@
         <link>https://Tcohneyn.github.io/tags/</link>
         <description>Tags - Tag - Tcohneyn</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>minamichen@outlook.com (Tcohneyn)</managingEditor>
-            <webMaster>minamichen@outlook.com (Tcohneyn)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 22 Sep 2026 15:46:03 &#43;0800</lastBuildDate><atom:link href="https://Tcohneyn.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>minamichen@outlook.com (Tcohneyn)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 24 Oct 2026 00:14:29 &#43;0800</lastBuildDate><atom:link href="https://Tcohneyn.github.io/tags/" rel="self" type="application/rss+xml" /><item>
     <title>AI</title>
     <link>https://Tcohneyn.github.io/tags/ai/</link>
-    <pubDate>Tue, 22 Sep 2026 15:46:03 &#43;0800</pubDate>
+    <pubDate>Sat, 24 Oct 2026 00:14:29 &#43;0800</pubDate>
     <author>minamichen@outlook.com (Tcohneyn)</author>
     <guid>https://Tcohneyn.github.io/tags/ai/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>DSH</title>
+    <link>https://Tcohneyn.github.io/tags/dsh/</link>
+    <pubDate>Sat, 24 Oct 2026 00:14:29 &#43;0800</pubDate>
+    <author>minamichen@outlook.com (Tcohneyn)</author>
+    <guid>https://Tcohneyn.github.io/tags/dsh/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>RAG</title>
+    <link>https://Tcohneyn.github.io/tags/rag/</link>
+    <pubDate>Tue, 20 Oct 2026 15:34:30 &#43;0800</pubDate>
+    <author>minamichen@outlook.com (Tcohneyn)</author>
+    <guid>https://Tcohneyn.github.io/tags/rag/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
@@ -66,22 +82,6 @@
     <pubDate>Tue, 03 Mar 2020 16:29:59 &#43;0800</pubDate>
     <author>minamichen@outlook.com (Tcohneyn)</author>
     <guid>https://Tcohneyn.github.io/tags/shortcodes/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>HTML</title>
-    <link>https://Tcohneyn.github.io/tags/html/</link>
-    <pubDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</pubDate>
-    <author>minamichen@outlook.com (Tcohneyn)</author>
-    <guid>https://Tcohneyn.github.io/tags/html/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Emoji</title>
-    <link>https://Tcohneyn.github.io/tags/emoji/</link>
-    <pubDate>Tue, 01 Oct 2019 17:55:28 &#43;0800</pubDate>
-    <author>minamichen@outlook.com (Tcohneyn)</author>
-    <guid>https://Tcohneyn.github.io/tags/emoji/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

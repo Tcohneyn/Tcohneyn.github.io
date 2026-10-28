@@ -4,7 +4,47 @@
         <link>https://Tcohneyn.github.io/categories/ai/</link>
         <description>AI - Category - Tcohneyn</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>minamichen@outlook.com (Tcohneyn)</managingEditor>
-            <webMaster>minamichen@outlook.com (Tcohneyn)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 22 Sep 2026 15:46:03 &#43;0800</lastBuildDate><atom:link href="https://Tcohneyn.github.io/categories/ai/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>minamichen@outlook.com (Tcohneyn)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 24 Oct 2026 00:14:29 &#43;0800</lastBuildDate><atom:link href="https://Tcohneyn.github.io/categories/ai/" rel="self" type="application/rss+xml" /><item>
+    <title>DSH框架</title>
+    <link>https://Tcohneyn.github.io/dsh-architecture/</link>
+    <pubDate>Sat, 24 Oct 2026 00:14:29 &#43;0800</pubDate>
+    <author>minamichen@outlook.com (Tcohneyn)</author>
+    <guid>https://Tcohneyn.github.io/dsh-architecture/</guid>
+    <description><![CDATA[最近DSH插件生态越来越丰富，所以花了一点时间来了解了一下DSH的框架。 一句话总结 DSH 基于 Cordis 插件机制，将 Agent 的能力（模型适配、工具注册、日志、a]]></description>
+</item>
+<item>
+    <title>DSH好用的插件总结</title>
+    <link>https://Tcohneyn.github.io/dsh-plugin/</link>
+    <pubDate>Wed, 21 Oct 2026 17:30:45 &#43;0800</pubDate>
+    <author>minamichen@outlook.com (Tcohneyn)</author>
+    <guid>https://Tcohneyn.github.io/dsh-plugin/</guid>
+    <description><![CDATA[前言 最近发现DSH有趣好用的插件越来越多，就想着单独写一篇用来总结用过的有趣的插件，后续还会更新。。。 DSH刷b站插件 第一种 源码：GitHu]]></description>
+</item>
+<item>
+    <title>AI 信息检索和搜索基础</title>
+    <link>https://Tcohneyn.github.io/ai-rag-information-retrieval-and-search-foundations/</link>
+    <pubDate>Tue, 20 Oct 2026 15:34:30 &#43;0800</pubDate>
+    <author>minamichen@outlook.com (Tcohneyn)</author>
+    <guid>https://Tcohneyn.github.io/ai-rag-information-retrieval-and-search-foundations/</guid>
+    <description><![CDATA[检索器架构概述 三种不同的检索技术 关键词检索（Keyword Search） 关键词搜索主要关注用户输入的词语是否出现在文档中。 例如，用户提问： UE5]]></description>
+</item>
+<item>
+    <title>AI LLM</title>
+    <link>https://Tcohneyn.github.io/ai-rag-llm/</link>
+    <pubDate>Fri, 16 Oct 2026 23:47:29 &#43;0800</pubDate>
+    <author>minamichen@outlook.com (Tcohneyn)</author>
+    <guid>https://Tcohneyn.github.io/ai-rag-llm/</guid>
+    <description><![CDATA[RAG 学习笔记：大语言模型（LLM）的工作原理 一、核心知识点概览 LLM 的本质 根据已有上下文，预测下一个 Token，并不断重复，生成完整文本。 模型如何]]></description>
+</item>
+<item>
+    <title>AI RAG概述</title>
+    <link>https://Tcohneyn.github.io/ai-rag-overview/</link>
+    <pubDate>Fri, 09 Oct 2026 21:28:29 &#43;0800</pubDate>
+    <author>minamichen@outlook.com (Tcohneyn)</author>
+    <guid>https://Tcohneyn.github.io/ai-rag-overview/</guid>
+    <description><![CDATA[RAG简介 RAG（Retrieval Augmented Generation，检索增强生成）是目前最常用的 AI 问答方案之一。它的核心思想是：先从知识库中检索相关]]></description>
+</item>
+<item>
     <title>Codex 第三方 API 中转站生图功能失败解决方案</title>
     <link>https://Tcohneyn.github.io/ai-apiimage/</link>
     <pubDate>Tue, 22 Sep 2026 15:46:03 &#43;0800</pubDate>

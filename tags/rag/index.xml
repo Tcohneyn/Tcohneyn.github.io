@@ -1,0 +1,32 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>RAG - Tag - Tcohneyn</title>
+        <link>https://Tcohneyn.github.io/tags/rag/</link>
+        <description>RAG - Tag - Tcohneyn</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>minamichen@outlook.com (Tcohneyn)</managingEditor>
+            <webMaster>minamichen@outlook.com (Tcohneyn)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 20 Oct 2026 15:34:30 &#43;0800</lastBuildDate><atom:link href="https://Tcohneyn.github.io/tags/rag/" rel="self" type="application/rss+xml" /><item>
+    <title>AI 信息检索和搜索基础</title>
+    <link>https://Tcohneyn.github.io/ai-rag-information-retrieval-and-search-foundations/</link>
+    <pubDate>Tue, 20 Oct 2026 15:34:30 &#43;0800</pubDate>
+    <author>minamichen@outlook.com (Tcohneyn)</author>
+    <guid>https://Tcohneyn.github.io/ai-rag-information-retrieval-and-search-foundations/</guid>
+    <description><![CDATA[检索器架构概述 三种不同的检索技术 关键词检索（Keyword Search） 关键词搜索主要关注用户输入的词语是否出现在文档中。 例如，用户提问： UE5]]></description>
+</item>
+<item>
+    <title>AI LLM</title>
+    <link>https://Tcohneyn.github.io/ai-rag-llm/</link>
+    <pubDate>Fri, 16 Oct 2026 23:47:29 &#43;0800</pubDate>
+    <author>minamichen@outlook.com (Tcohneyn)</author>
+    <guid>https://Tcohneyn.github.io/ai-rag-llm/</guid>
+    <description><![CDATA[RAG 学习笔记：大语言模型（LLM）的工作原理 一、核心知识点概览 LLM 的本质 根据已有上下文，预测下一个 Token，并不断重复，生成完整文本。 模型如何]]></description>
+</item>
+<item>
+    <title>AI RAG概述</title>
+    <link>https://Tcohneyn.github.io/ai-rag-overview/</link>
+    <pubDate>Fri, 09 Oct 2026 21:28:29 &#43;0800</pubDate>
+    <author>minamichen@outlook.com (Tcohneyn)</author>
+    <guid>https://Tcohneyn.github.io/ai-rag-overview/</guid>
+    <description><![CDATA[RAG简介 RAG（Retrieval Augmented Generation，检索增强生成）是目前最常用的 AI 问答方案之一。它的核心思想是：先从知识库中检索相关]]></description>
+</item>
+</channel>
+</rss>

@@ -4,7 +4,47 @@
         <link>https://Tcohneyn.github.io/posts/</link>
         <description>All Posts | Tcohneyn</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>minamichen@outlook.com (Tcohneyn)</managingEditor>
-            <webMaster>minamichen@outlook.com (Tcohneyn)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 22 Sep 2026 15:46:03 &#43;0800</lastBuildDate><atom:link href="https://Tcohneyn.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>minamichen@outlook.com (Tcohneyn)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 24 Oct 2026 00:14:29 &#43;0800</lastBuildDate><atom:link href="https://Tcohneyn.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>DSH框架</title>
+    <link>https://Tcohneyn.github.io/dsh-architecture/</link>
+    <pubDate>Sat, 24 Oct 2026 00:14:29 &#43;0800</pubDate>
+    <author>minamichen@outlook.com (Tcohneyn)</author>
+    <guid>https://Tcohneyn.github.io/dsh-architecture/</guid>
+    <description><![CDATA[最近DSH插件生态越来越丰富，所以花了一点时间来了解了一下DSH的框架。 一句话总结 DSH 基于 Cordis 插件机制，将 Agent 的能力（模型适配、工具注册、日志、a]]></description>
+</item>
+<item>
+    <title>DSH好用的插件总结</title>
+    <link>https://Tcohneyn.github.io/dsh-plugin/</link>
+    <pubDate>Wed, 21 Oct 2026 17:30:45 &#43;0800</pubDate>
+    <author>minamichen@outlook.com (Tcohneyn)</author>
+    <guid>https://Tcohneyn.github.io/dsh-plugin/</guid>
+    <description><![CDATA[前言 最近发现DSH有趣好用的插件越来越多，就想着单独写一篇用来总结用过的有趣的插件，后续还会更新。。。 DSH刷b站插件 第一种 源码：GitHu]]></description>
+</item>
+<item>
+    <title>AI 信息检索和搜索基础</title>
+    <link>https://Tcohneyn.github.io/ai-rag-information-retrieval-and-search-foundations/</link>
+    <pubDate>Tue, 20 Oct 2026 15:34:30 &#43;0800</pubDate>
+    <author>minamichen@outlook.com (Tcohneyn)</author>
+    <guid>https://Tcohneyn.github.io/ai-rag-information-retrieval-and-search-foundations/</guid>
+    <description><![CDATA[检索器架构概述 三种不同的检索技术 关键词检索（Keyword Search） 关键词搜索主要关注用户输入的词语是否出现在文档中。 例如，用户提问： UE5]]></description>
+</item>
+<item>
+    <title>AI LLM</title>
+    <link>https://Tcohneyn.github.io/ai-rag-llm/</link>
+    <pubDate>Fri, 16 Oct 2026 23:47:29 &#43;0800</pubDate>
+    <author>minamichen@outlook.com (Tcohneyn)</author>
+    <guid>https://Tcohneyn.github.io/ai-rag-llm/</guid>
+    <description><![CDATA[RAG 学习笔记：大语言模型（LLM）的工作原理 一、核心知识点概览 LLM 的本质 根据已有上下文，预测下一个 Token，并不断重复，生成完整文本。 模型如何]]></description>
+</item>
+<item>
+    <title>AI RAG概述</title>
+    <link>https://Tcohneyn.github.io/ai-rag-overview/</link>
+    <pubDate>Fri, 09 Oct 2026 21:28:29 &#43;0800</pubDate>
+    <author>minamichen@outlook.com (Tcohneyn)</author>
+    <guid>https://Tcohneyn.github.io/ai-rag-overview/</guid>
+    <description><![CDATA[RAG简介 RAG（Retrieval Augmented Generation，检索增强生成）是目前最常用的 AI 问答方案之一。它的核心思想是：先从知识库中检索相关]]></description>
+</item>
+<item>
     <title>Codex 第三方 API 中转站生图功能失败解决方案</title>
     <link>https://Tcohneyn.github.io/ai-apiimage/</link>
     <pubDate>Tue, 22 Sep 2026 15:46:03 &#43;0800</pubDate>
@@ -43,47 +83,6 @@
     <author>minamichen@outlook.com (Tcohneyn)</author>
     <guid>https://Tcohneyn.github.io/hugo/</guid>
     <description><![CDATA[前言 本博客使用的是Hugo的LoveIt主题，本文也是基于该主题而写的，不过Hugo的美化步骤应该大同小异，版本如下： hugo: v0.131.0/extended windows/amd64 BuildDate: unknown LoveIt: v0.3.1 请注意，]]></description>
-</item>
-<item>
-    <title>主题文档 - 基本概念</title>
-    <link>https://Tcohneyn.github.io/theme-documentation-basics/</link>
-    <pubDate>Fri, 06 Mar 2020 21:40:32 &#43;0800</pubDate>
-    <author>minamichen@outlook.com (Tcohneyn)</author>
-    <guid>https://Tcohneyn.github.io/theme-documentation-basics/</guid>
-    <description><![CDATA[<p>探索 Hugo - <strong>LoveIt</strong> 主题的全部内容和背后的核心概念.</p>]]></description>
-</item>
-<item>
-    <title>主题文档 - 内容</title>
-    <link>https://Tcohneyn.github.io/theme-documentation-content/</link>
-    <pubDate>Thu, 05 Mar 2020 16:30:05 &#43;0800</pubDate>
-    <author>minamichen@outlook.com (Tcohneyn)</author>
-    <guid>https://Tcohneyn.github.io/theme-documentation-content/</guid>
-    <description><![CDATA[<p>了解如何在 <strong>LoveIt</strong> 主题中快速, 直观地创建和组织内容.</p>]]></description>
-</item>
-<item>
-    <title>主题文档 - 扩展 Shortcodes</title>
-    <link>https://Tcohneyn.github.io/theme-documentation-extended-shortcodes/</link>
-    <pubDate>Tue, 03 Mar 2020 16:29:59 &#43;0800</pubDate>
-    <author>minamichen@outlook.com (Tcohneyn)</author>
-    <guid>https://Tcohneyn.github.io/theme-documentation-extended-shortcodes/</guid>
-    <description><![CDATA[<p><strong>LoveIt</strong> 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode.</p>]]></description>
-</item>
-<item>
-    <title>主题文档 - mermaid Shortcode</title>
-    <link>https://Tcohneyn.github.io/theme-documentation-mermaid-shortcode/</link>
-    <pubDate>Tue, 03 Mar 2020 15:29:59 &#43;0800</pubDate>
-    <author>minamichen@outlook.com (Tcohneyn)</author>
-    <guid>https://Tcohneyn.github.io/theme-documentation-mermaid-shortcode/</guid>
-    <description><![CDATA[<a href="https://github.com/dillonzq/LoveIt/releases/tag/v0.2.11" rel="noopener noreffer" target="_blank"></a>
-<p><code>mermaid</code> shortcode 使用 <a href="https://mermaidjs.github.io/" target="_blank" rel="noopener noreffer ">Mermaid</a> 库提供绘制图表和流程图的功能.</p>]]></description>
-</item>
-<item>
-    <title>主题文档 - echarts Shortcode</title>
-    <link>https://Tcohneyn.github.io/theme-documentation-echarts-shortcode/</link>
-    <pubDate>Tue, 03 Mar 2020 14:29:59 &#43;0800</pubDate>
-    <author>minamichen@outlook.com (Tcohneyn)</author>
-    <guid>https://Tcohneyn.github.io/theme-documentation-echarts-shortcode/</guid>
-    <description><![CDATA[<p><code>echarts</code> shortcode 使用 <a href="https://echarts.apache.org/" target="_blank" rel="noopener noreffer ">ECharts</a> 库提供数据可视化的功能.</p>]]></description>
 </item>
 </channel>
 </rss>
